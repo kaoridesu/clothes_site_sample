@@ -19,28 +19,40 @@
 </table>
 <tbody>
 @{
-    foreach (var clothose in clothose_table)
+    foreach (var clothse in clothse_table)
     {
         <tr>
-            <td>@clothose.id</td>
-            <td>@clothose.kind</td>
-            <td>@clothose.product_name</td>
-            <td>@clothose.size</td>
-            <td>@clothose.color</td>
-            <td>@clothose.price</td>
-            <td>@clothose.material</td>
-            <td>@clothose.product_introduction</td>
+            <td>@clothse.id</td>
+            <td>@clothse.kind</td>
+            <td>@clothse.product_name</td>
+            <td>@clothse.size</td>
+            <td>@clothse.color</td>
+            <td>@clothse.price</td>
+            <td>@clothse.material</td>
+            <td>@clothse.product_introduction</td>
         </tr>
     }
 }
 </tbody>
 
 @code {
-    List<Master_clothose> clothose_table= new List<Master_clothose>();
+    List<Master_clothse> clothse_table= new List<Master_clothse>();
 
-    protected override Task OnInitializedAsync()
+    protected override async Task OnInitializedAsync()
     {
-       
+        string json = await HttpClient.GetStringAsync(requestUri: "https://script.google.com/macros/s/AKfycbxxgJYNn5yA4rmxmD_S7M0au9MHD6ZzHe6bWTvam9n59PN0WnseqG2spi8k03wVrQLtkg/exec");
+    // Console.WriteLine(json);json
+
+        JsonDocument jsonDocument = JsonDocument.Parse(json);
+        JsonElement jsonElement = jsonDocument.RootElement.GetProperty("[D]Master_clothse");
+        JsonElement.ArrayEnumerator list = jsonElement.EnumerateArray();
+
+
+        foreach (var VARIABLE in Master_clothse)
+        {
+            
+        }
     }
 
+    
 }
