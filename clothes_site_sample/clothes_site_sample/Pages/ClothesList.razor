@@ -1,4 +1,6 @@
 @page "/ClothesList"
+@using System.Text.Json
+@inject HttpClient HttpClient
 @using clothes_site_sample.scripts
 <h3>ClothesList</h3>
 
@@ -30,29 +32,53 @@
             <td>@clothse.price</td>
             <td>@clothse.material</td>
             <td>@clothse.product_introduction</td>
+            <button class="btn btn-primary" @onclick="@((() => OnClickDetail(clothse.id)))">
+                詳細
+            </button>
         </tr>
     }
 }
 </tbody>
 
 @code {
-    List<Master_clothse> clothse_table= new List<Master_clothse>();
+    List<Master_clothse> clothse_table = new List<Master_clothse>();
 
     protected override async Task OnInitializedAsync()
     {
         string json = await HttpClient.GetStringAsync(requestUri: "https://script.google.com/macros/s/AKfycbxxgJYNn5yA4rmxmD_S7M0au9MHD6ZzHe6bWTvam9n59PN0WnseqG2spi8k03wVrQLtkg/exec");
-    // Console.WriteLine(json);json
 
         JsonDocument jsonDocument = JsonDocument.Parse(json);
         JsonElement jsonElement = jsonDocument.RootElement.GetProperty("[D]Master_clothse");
         JsonElement.ArrayEnumerator list = jsonElement.EnumerateArray();
 
 
-        foreach (var VARIABLE in Master_clothse)
+        foreach (JsonElement masterClothseObject in list)
         {
-            
+            int id = masterClothseObject.GetProperty("id").GetInt32();
+            string kind = masterClothseObject.GetProperty("kind").GetString();
+            string product_name = masterClothseObject.GetProperty("product_name").GetString();
+            string size = masterClothseObject.GetProperty("size").GetString();
+            string color = masterClothseObject.GetProperty("color").GetString();
+            int price = masterClothseObject.GetProperty("price").GetInt32();
+            string material = masterClothseObject.GetProperty("material").GetString();
+            string product_introduction = masterClothseObject.GetProperty("product_introduction").GetString();
+
+            Master_clothse masterClothse = new Master_clothse(
+                id,
+                kind,
+                product_name,
+                size,
+                color,
+                price,
+                material,
+                product_introduction);
+            clothse_table.Add(masterClothse);
         }
     }
 
-    
+    public void OnClickDetail(int 味方の識別番号)
+    {
+        Console.WriteLine(味方の識別番号);
+    }
+
 }

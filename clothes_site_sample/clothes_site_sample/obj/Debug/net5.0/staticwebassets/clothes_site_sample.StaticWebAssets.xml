@@ -1,0 +1,4 @@
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="/" Path="/Users/kaori/Github/clothes_site/clothes_site_sample/clothes_site_sample/bin/Debug/net5.0/wwwroot/" />
+  <ContentRoot BasePath="/" Path="/Users/kaori/Github/clothes_site/clothes_site_sample/clothes_site_sample/obj/Debug/net5.0/scopedcss/bundle/" />
+</StaticWebAssets>
