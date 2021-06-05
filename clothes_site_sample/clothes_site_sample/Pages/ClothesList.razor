@@ -1,0 +1,46 @@
+@page "/ClothesList"
+@using clothes_site_sample.scripts
+<h3>ClothesList</h3>
+
+<table class="table" style="font-size: small">
+    <thead class="thead-light">
+    <tr>
+        <th>uniqueid</th>
+        <th>kind</th>
+        <th>product_name</th>
+        <th>size</th>
+        <th>color</th>
+        <th>price</th>
+        <th>material</th>
+        <th>product_introduction</th>
+
+    </tr>
+    </thead>
+</table>
+<tbody>
+@{
+    foreach (var clothose in clothose_table)
+    {
+        <tr>
+            <td>@clothose.id</td>
+            <td>@clothose.kind</td>
+            <td>@clothose.product_name</td>
+            <td>@clothose.size</td>
+            <td>@clothose.color</td>
+            <td>@clothose.price</td>
+            <td>@clothose.material</td>
+            <td>@clothose.product_introduction</td>
+        </tr>
+    }
+}
+</tbody>
+
+@code {
+    List<Master_clothose> clothose_table= new List<Master_clothose>();
+
+    protected override Task OnInitializedAsync()
+    {
+       
+    }
+
+}
