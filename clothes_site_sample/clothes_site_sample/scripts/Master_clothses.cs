@@ -1,6 +1,6 @@
 namespace clothes_site_sample.scripts
 {
-    public class Master_clothse
+    public class Master_clothses
     {
         public int id;
         public string kind;
@@ -11,7 +11,7 @@ namespace clothes_site_sample.scripts
         public string material;
         public string product_introduction;
        
-        public Master_clothse(int id, string kind, string productName, string size, string color, int price, string material, string productIntroduction)
+        public Master_clothses(int id, string kind, string productName, string size, string color, int price, string material, string productIntroduction)
         {
             this.id = id;
             this.kind = kind;

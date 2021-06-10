@@ -107,29 +107,29 @@ using clothes_site_sample.scripts;
 #nullable restore
 #line 43 "/Users/kaori/Github/clothes_site/clothes_site_sample/clothes_site_sample/Pages/ClothesList.razor"
        
-    List<Master_clothse> clothse_table = new List<Master_clothse>();
+    List<Master_clothses> clothse_table = new List<Master_clothses>();
 
     protected override async Task OnInitializedAsync()
     {
-        string json = await HttpClient.GetStringAsync(requestUri: "https://script.google.com/macros/s/AKfycbxxgJYNn5yA4rmxmD_S7M0au9MHD6ZzHe6bWTvam9n59PN0WnseqG2spi8k03wVrQLtkg/exec");
-
+        string json = await HttpClient.GetStringAsync(requestUri: "https://script.google.com/macros/s/AKfycbw_oM7K0sMnA2fYfkq98TsQt1IOsz3TfibyapxefcvLlPEfP5-pszy6G13bdl3XDjAkCw/exec");
+        Console.WriteLine(json);
         JsonDocument jsonDocument = JsonDocument.Parse(json);
-        JsonElement jsonElement = jsonDocument.RootElement.GetProperty("[D]Master_clothse");
+        JsonElement jsonElement = jsonDocument.RootElement.GetProperty("[D]master_clothes");
         JsonElement.ArrayEnumerator list = jsonElement.EnumerateArray();
 
 
-        foreach (JsonElement masterClothseObject in list)
+        foreach (JsonElement masterClothesObject in list)
         {
-            int id = masterClothseObject.GetProperty("id").GetInt32();
-            string kind = masterClothseObject.GetProperty("kind").GetString();
-            string product_name = masterClothseObject.GetProperty("product_name").GetString();
-            string size = masterClothseObject.GetProperty("size").GetString();
-            string color = masterClothseObject.GetProperty("color").GetString();
-            int price = masterClothseObject.GetProperty("price").GetInt32();
-            string material = masterClothseObject.GetProperty("material").GetString();
-            string product_introduction = masterClothseObject.GetProperty("product_introduction").GetString();
+            int id = masterClothesObject.GetProperty("id").GetInt32();
+            string kind = masterClothesObject.GetProperty("kind").GetString();
+            string product_name = masterClothesObject.GetProperty("product_name").GetString();
+            string size = masterClothesObject.GetProperty("size").GetString();
+            string color = masterClothesObject.GetProperty("color").GetString();
+            int price = masterClothesObject.GetProperty("price").GetInt32();
+            string material = masterClothesObject.GetProperty("material").GetString();
+            string product_introduction = masterClothesObject.GetProperty("producut_introduction").GetString();
 
-            Master_clothse masterClothse = new Master_clothse(
+            Master_clothses masterClothse = new Master_clothses(
                 id,
                 kind,
                 product_name,
