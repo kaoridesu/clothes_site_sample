@@ -1,0 +1,9 @@
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+bin/
+obj/
+/packages/
+riderModule.iml
+/_ReSharper.Caches/
