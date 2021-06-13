@@ -1,6 +1,6 @@
-namespace clothes_site_sample.scripts
+namespace clothes_site_sample.Scripts.Tables
 {
-    public class MasterCloth
+    public class MasterClothEntity
     {
         public int id;
         public string kind;
@@ -10,7 +10,7 @@ namespace clothes_site_sample.scripts
         public string material;
         public string product_introduction;
 
-        public MasterCloth(int id, string kind, string productName, int price,
+        public MasterClothEntity(int id, string kind, string productName, int price,
             string material, string productIntroduction)
         {
             this.id = id;

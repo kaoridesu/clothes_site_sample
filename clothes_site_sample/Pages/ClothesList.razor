@@ -2,6 +2,7 @@
 @using System.Text.Json
 @inject HttpClient HttpClient
 @using clothes_site_sample.scripts
+@using clothes_site_sample.Scripts.Tables
 <h3>ClothesList</h3>
 
 <table class="table" style="font-size: small">
@@ -40,7 +41,7 @@
 </tbody>
 
 @code {
-    List<MasterCloth> clothse_table = new List<MasterCloth>();
+    List<MasterClothEntity> clothse_table = new List<MasterClothEntity>();
 
     protected override async Task OnInitializedAsync()
     {
@@ -59,14 +60,14 @@
             string material = masterClothesObject.GetProperty("material").GetString();
             string product_introduction = masterClothesObject.GetProperty("producut_introduction").GetString();
 
-            MasterCloth masterCloth = new MasterCloth(
+            MasterClothEntity masterClothEntity = new MasterClothEntity(
                 id,
                 kind,
                 product_name,
                 price,
                 material,
                 product_introduction);
-            clothse_table.Add(masterCloth);
+            clothse_table.Add(masterClothEntity);
         }
     }
 
