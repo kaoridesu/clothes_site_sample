@@ -1,1 +1,21 @@
 ﻿@page "/"
+@using clothes_site_sample.scripts.Bases
+@using clothes_site_sample.Scripts.Tables
+
+@inject IRepository<MasterClothEntity> masterClothRepository
+
+@{
+    foreach (var entity in masterClothRepository.FindAll())
+    {
+        <div>@entity.ProductName</div>
+    }
+}
+
+@code
+{
+    protected override void OnInitialized()
+    {
+        var list = masterClothRepository.FindAll();
+        Console.WriteLine(list.Count);
+    }
+}

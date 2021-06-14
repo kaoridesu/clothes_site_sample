@@ -6,19 +6,30 @@
 
 @inherits clothes_site_sample.scripts.Bases.AppComponentBase<App>
 
-<Router AppAssembly="@typeof(Program).Assembly" PreferExactMatches="@true">
-    <Found Context="routeData">
-        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)"/>
-    </Found>
-    <NotFound>
-        <LayoutView Layout="@typeof(MainLayout)">
-            <p>Sorry, there's nothing at this address.</p>
-        </LayoutView>
-    </NotFound>
-</Router>
+@if (isLoading)
+{
+    <p>
+        <em>スプレッドシートからデータ取得中...</em>
+    </p>
+}
+else
+{
+    <Router AppAssembly="@typeof(Program).Assembly" PreferExactMatches="@true">
+        <Found Context="routeData">
+            <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)"/>
+        </Found>
+        <NotFound>
+            <LayoutView Layout="@typeof(MainLayout)">
+                <p>Sorry, there's nothing at this address.</p>
+            </LayoutView>
+        </NotFound>
+    </Router>
+}
 
 @code
 {
+    bool isLoading = true;
+
     protected override async Task OnInitializedAsync()
     {
         string json = await HttpClient.GetStringAsync(requestUri: "https://script.google.com/macros/s/AKfycbw_oM7K0sMnA2fYfkq98TsQt1IOsz3TfibyapxefcvLlPEfP5-pszy6G13bdl3XDjAkCw/exec");
@@ -43,5 +54,12 @@
                 material, price, pointRate, videoUrl, productIntroduction);
             masterClothRepository.Add(masterClothEntity);
         }
+
+        foreach (var entity in masterClothRepository.FindAll())
+        {
+            Console.WriteLine(entity.ProductName);
+        }
+
+        isLoading = false;
     }
 }
