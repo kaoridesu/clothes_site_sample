@@ -1,6 +1,7 @@
 @using System.Text.Json
 @using clothes_site_sample.scripts.Bases
 @using clothes_site_sample.Scripts.Tables
+@using System.Runtime.Serialization
 
 @inject IRepository<MasterClothEntity> masterClothRepository
 
@@ -30,35 +31,65 @@ else
 {
     bool isLoading = true;
 
+    public class Database
+    {
+        [DataMember(Name = "[D]master_clothes")]
+        public List<MasterClothEntity> MasterClothEntities { get; init; }
+    }
+
     protected override async Task OnInitializedAsync()
     {
-        string json = await HttpClient.GetStringAsync(requestUri: "https://script.google.com/macros/s/AKfycbw_oM7K0sMnA2fYfkq98TsQt1IOsz3TfibyapxefcvLlPEfP5-pszy6G13bdl3XDjAkCw/exec");
-        JsonDocument jsonDocument = JsonDocument.Parse(json);
-        JsonElement jsonElement = jsonDocument.RootElement.GetProperty("[D]master_clothes");
-        JsonElement.ArrayEnumerator list = jsonElement.EnumerateArray();
+    // string json = await HttpClient.GetStringAsync(requestUri: "https://script.google.com/macros/s/AKfycbw_oM7K0sMnA2fYfkq98TsQt1IOsz3TfibyapxefcvLlPEfP5-pszy6G13bdl3XDjAkCw/exec");
+        string json = await HttpClient.GetStringAsync(requestUri: "master.json");
+        var database = Utf8Json.JsonSerializer.Deserialize<Database>(json);
 
-        foreach (JsonElement masterClothesObject in list)
+        foreach (var entity in database.MasterClothEntities)
         {
-            int id = masterClothesObject.GetProperty(nameof(id)).GetInt32();
-            string category = masterClothesObject.GetProperty("category").GetString();
-            string kind = masterClothesObject.GetProperty("kind").GetString();
-            string productName = masterClothesObject.GetProperty("product_name").GetString();
-            string code = masterClothesObject.GetProperty("code").GetString();
-            string material = masterClothesObject.GetProperty("material").GetString();
-            int price = masterClothesObject.GetProperty("price").GetInt32();
-            int pointRate = masterClothesObject.GetProperty("point_rate").GetInt32();
-            string videoUrl = masterClothesObject.GetProperty("video_url").GetString();
-            string productIntroduction = masterClothesObject.GetProperty("product_introduction").GetString();
-
-            MasterClothEntity masterClothEntity = new MasterClothEntity(id, category, kind, productName, code,
-                material, price, pointRate, videoUrl, productIntroduction);
-            masterClothRepository.Add(masterClothEntity);
+            Console.WriteLine(entity.Id.ToString());
+            Console.WriteLine(entity.ProductName.ToString());
         }
 
-        foreach (var entity in masterClothRepository.FindAll())
-        {
-            Console.WriteLine(entity.ProductName);
-        }
+    // var dict = Utf8Json.JsonSerializer.Deserialize<Dictionary<string, object>>(json);
+    //
+    // foreach (var keyValue in dict)
+    // {
+    //     Console.WriteLine(keyValue.Key);
+    //     Utf8Json.JsonSerializer.Serialize(keyValue.Value);
+    // }
+
+    //
+    // Database database = JsonSerializer.Deserialize<Database>(json);
+    // foreach (var entity in database.masterClothRepository)
+    // {
+    //     Console.WriteLine(entity.ProductName);
+    // }
+
+    // JsonDocument jsonDocument = JsonDocument.Parse(json);
+    // JsonElement jsonElement = jsonDocument.RootElement.GetProperty("[D]master_clothes");
+    // JsonElement.ArrayEnumerator list = jsonElement.EnumerateArray();
+    //
+    // foreach (JsonElement masterClothesObject in list)
+    // {
+    //     int id = masterClothesObject.GetProperty(nameof(id)).GetInt32();
+    //     string category = masterClothesObject.GetProperty("category").GetString();
+    //     string kind = masterClothesObject.GetProperty("kind").GetString();
+    //     string productName = masterClothesObject.GetProperty("product_name").GetString();
+    //     string code = masterClothesObject.GetProperty("code").GetString();
+    //     string material = masterClothesObject.GetProperty("material").GetString();
+    //     int price = masterClothesObject.GetProperty("price").GetInt32();
+    //     int pointRate = masterClothesObject.GetProperty("point_rate").GetInt32();
+    //     string videoUrl = masterClothesObject.GetProperty("video_url").GetString();
+    //     string productIntroduction = masterClothesObject.GetProperty("product_introduction").GetString();
+    //
+    //     MasterClothEntity masterClothEntity = new MasterClothEntity(id, category, kind, productName, code,
+    //         material, price, pointRate, videoUrl, productIntroduction);
+    //     masterClothRepository.Add(masterClothEntity);
+    // }
+    //
+    // foreach (var entity in masterClothRepository.FindAll())
+    // {
+    //     Console.WriteLine(entity.ProductName);
+    // }
 
         isLoading = false;
     }
