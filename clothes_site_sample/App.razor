@@ -42,13 +42,17 @@ else
     {
     // string json = await HttpClient.GetStringAsync(requestUri: "https://script.google.com/macros/s/AKfycbw_oM7K0sMnA2fYfkq98TsQt1IOsz3TfibyapxefcvLlPEfP5-pszy6G13bdl3XDjAkCw/exec");
         string json = await HttpClient.GetStringAsync(requestUri: "master.json");
-        var database = JsonSerializer.Deserialize<Database>(json);
+        var jsonElement = JsonSerializer.Deserialize<JsonElement>(json);
+        var a = jsonElement.GetProperty("[D]master_clothes");
+        Console.WriteLine(jsonElement.GetProperty("[D]master_clothes"));
 
-        foreach (var entity in database.MasterClothEntities)
-        {
-            Console.WriteLine(entity.Id.ToString());
-            Console.WriteLine(entity.ProductName.ToString());
-        }
+        masterClothRepository = JsonSerializer.Deserialize<MasterClothRepository>(json);
+        
+    // foreach (var entity in database.MasterClothEntities)
+    // {
+    //     Console.WriteLine(entity.Id.ToString());
+    //     Console.WriteLine(entity.ProductName.ToString());
+    // }
 
         isLoading = false;
     }

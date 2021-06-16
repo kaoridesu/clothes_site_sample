@@ -19,40 +19,5 @@ namespace clothes_site_sample.Scripts.Tables
         public MasterClothEntity()
         {
         }
-
-        // public MasterClothEntity(int id, string category, string kind, string productName, string code, string material,
-        //     int price, int pointRate, string videoUrl, string productIntroduction)
-        // {
-        //     this.id = id;
-        //     this.category = category;
-        //     this.kind = kind;
-        //     this.productName = productName;
-        //     this.code = code;
-        //     this.material = material;
-        //     this.price = price;
-        //     this.pointRate = pointRate;
-        //     this.videoUrl = videoUrl;
-        //     this.productIntroduction = productIntroduction;
-        // }
-
-        // public int Id => id;
-        //
-        // public string Category => category;
-        //
-        // public string Kind => kind;
-        //
-        // public string ProductName => productName;
-        //
-        // public string Code => code;
-        //
-        // public string Material => material;
-        //
-        // public int Price => price;
-        //
-        // public int PointRate => pointRate;
-        //
-        // public string VideoUrl => videoUrl;
-        //
-        // public string ProductIntroduction => productIntroduction;
     }
 }
