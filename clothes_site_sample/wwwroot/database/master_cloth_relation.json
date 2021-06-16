@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "master_clothes_id": 15,
+    "master_clothes_relation_id": 16
+  },
+  {
+    "id": 2,
+    "master_clothes_id": 15,
+    "master_clothes_relation_id": 17
+  },
+  {
+    "id": 3,
+    "master_clothes_id": 16,
+    "master_clothes_relation_id": 15
+  },
+  {
+    "id": 4,
+    "master_clothes_id": 16,
+    "master_clothes_relation_id": 17
+  },
+  {
+    "id": 5,
+    "master_clothes_id": 17,
+    "master_clothes_relation_id": 15
+  },
+  {
+    "id": 6,
+    "master_clothes_id": 17,
+    "master_clothes_relation_id": 16
+  }
+]

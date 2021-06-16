@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "master_clothes_id": 15,
+    "color": "ブラック",
+    "image_url": "https://cdn.grail.bz/images/goods/t/k8799w/k8799w_col_11.jpg"
+  },
+  {
+    "id": 2,
+    "master_clothes_id": 15,
+    "color": "ブルー",
+    "image_url": "https://cdn.grail.bz/images/goods/t/k8799w/k8799w_col_15.jpg"
+  },
+  {
+    "id": 3,
+    "master_clothes_id": 15,
+    "color": "オフホワイト",
+    "image_url": "https://cdn.grail.bz/images/goods/t/k8799w/k8799w_col_59.jpg"
+  },
+  {
+    "id": 4,
+    "master_clothes_id": 15,
+    "color": "モカ",
+    "image_url": "https://cdn.grail.bz/images/goods/t/k8799w/k8799w_col_561.jpg"
+  },
+  {
+    "id": 5,
+    "master_clothes_id": 15,
+    "color": "グレージュ",
+    "image_url": "https://cdn.grail.bz/images/goods/t/k8799w/k8799w_col_588.jpg"
+  },
+  {
+    "id": 6,
+    "master_clothes_id": 16,
+    "color": "ブラック",
+    "image_url": "https://cdn.grail.bz/images/goods/t/k8799w/k8799w_col_561.jpg"
+  },
+  {
+    "id": 7,
+    "master_clothes_id": 16,
+    "color": "ホワイト",
+    "image_url": "https://cdn.grail.bz/images/goods/t/k8799w/k8799w_col_588.jpg"
+  },
+  {
+    "id": 8,
+    "master_clothes_id": 17,
+    "color": "シルバー",
+    "image_url": "https://cdn.grail.bz/images/goods/d/ae3328/ae3328_u.jpg"
+  },
+  {
+    "id": 9,
+    "master_clothes_id": 17,
+    "color": "ゴールド",
+    "image_url": "https://cdn.grail.bz/images/goods/t/ae3328/ae3328_col_58.jpg"
+  }
+]

@@ -1,0 +1,292 @@
+[
+  {
+    "id": 1,
+    "master_clothes_id": 15,
+    "size": "s",
+    "master_clothes_color_id": 1,
+    "price": 1999,
+    "quantity": 50,
+    "is_pre_order": false,
+    "arrival_date": ""
+  },
+  {
+    "id": 2,
+    "master_clothes_id": 15,
+    "size": "m",
+    "master_clothes_color_id": 1,
+    "price": 1999,
+    "quantity": 30,
+    "is_pre_order": false,
+    "arrival_date": ""
+  },
+  {
+    "id": 3,
+    "master_clothes_id": 15,
+    "size": "l",
+    "master_clothes_color_id": 1,
+    "price": 1999,
+    "quantity": 20,
+    "is_pre_order": false,
+    "arrival_date": ""
+  },
+  {
+    "id": 4,
+    "master_clothes_id": 15,
+    "size": "s",
+    "master_clothes_color_id": 2,
+    "price": 1999,
+    "quantity": 0,
+    "is_pre_order": true,
+    "arrival_date": "2021-06-14T15:00:00.000Z"
+  },
+  {
+    "id": 5,
+    "master_clothes_id": 15,
+    "size": "m",
+    "master_clothes_color_id": 2,
+    "price": 1999,
+    "quantity": 0,
+    "is_pre_order": true,
+    "arrival_date": "2021-06-14T15:00:00.000Z"
+  },
+  {
+    "id": 6,
+    "master_clothes_id": 15,
+    "size": "l",
+    "master_clothes_color_id": 2,
+    "price": 1999,
+    "quantity": 0,
+    "is_pre_order": true,
+    "arrival_date": "2021-06-14T15:00:00.000Z"
+  },
+  {
+    "id": 7,
+    "master_clothes_id": 15,
+    "size": "s",
+    "master_clothes_color_id": 3,
+    "price": 1999,
+    "quantity": 50,
+    "is_pre_order": false,
+    "arrival_date": ""
+  },
+  {
+    "id": 8,
+    "master_clothes_id": 15,
+    "size": "m",
+    "master_clothes_color_id": 3,
+    "price": 1999,
+    "quantity": 30,
+    "is_pre_order": false,
+    "arrival_date": ""
+  },
+  {
+    "id": 9,
+    "master_clothes_id": 15,
+    "size": "l",
+    "master_clothes_color_id": 3,
+    "price": 1999,
+    "quantity": 20,
+    "is_pre_order": false,
+    "arrival_date": ""
+  },
+  {
+    "id": 10,
+    "master_clothes_id": 15,
+    "size": "s",
+    "master_clothes_color_id": 4,
+    "price": 1999,
+    "quantity": 50,
+    "is_pre_order": false,
+    "arrival_date": ""
+  },
+  {
+    "id": 11,
+    "master_clothes_id": 15,
+    "size": "m",
+    "master_clothes_color_id": 4,
+    "price": 1999,
+    "quantity": 30,
+    "is_pre_order": false,
+    "arrival_date": ""
+  },
+  {
+    "id": 12,
+    "master_clothes_id": 15,
+    "size": "l",
+    "master_clothes_color_id": 4,
+    "price": 1999,
+    "quantity": 20,
+    "is_pre_order": false,
+    "arrival_date": ""
+  },
+  {
+    "id": 13,
+    "master_clothes_id": 15,
+    "size": "s",
+    "master_clothes_color_id": 5,
+    "price": 1999,
+    "quantity": 50,
+    "is_pre_order": false,
+    "arrival_date": ""
+  },
+  {
+    "id": 14,
+    "master_clothes_id": 15,
+    "size": "m",
+    "master_clothes_color_id": 5,
+    "price": 1999,
+    "quantity": 30,
+    "is_pre_order": false,
+    "arrival_date": ""
+  },
+  {
+    "id": 15,
+    "master_clothes_id": 15,
+    "size": "l",
+    "master_clothes_color_id": 5,
+    "price": 1999,
+    "quantity": 20,
+    "is_pre_order": false,
+    "arrival_date": ""
+  },
+  {
+    "id": 16,
+    "master_clothes_id": 16,
+    "size": "22,5ｃｍ",
+    "master_clothes_color_id": 6,
+    "price": 2499,
+    "quantity": 0,
+    "is_pre_order": true,
+    "arrival_date": "2021-07-14T15:00:00.000Z"
+  },
+  {
+    "id": 17,
+    "master_clothes_id": 16,
+    "size": "23,0ｃｍ",
+    "master_clothes_color_id": 6,
+    "price": 2499,
+    "quantity": 0,
+    "is_pre_order": true,
+    "arrival_date": "2021-07-14T15:00:00.000Z"
+  },
+  {
+    "id": 18,
+    "master_clothes_id": 16,
+    "size": "23,5ｃｍ",
+    "master_clothes_color_id": 6,
+    "price": 2499,
+    "quantity": 0,
+    "is_pre_order": true,
+    "arrival_date": "2021-07-14T15:00:00.000Z"
+  },
+  {
+    "id": 19,
+    "master_clothes_id": 16,
+    "size": "24,0ｃｍ",
+    "master_clothes_color_id": 6,
+    "price": 2499,
+    "quantity": 0,
+    "is_pre_order": true,
+    "arrival_date": "2021-07-14T15:00:00.000Z"
+  },
+  {
+    "id": 20,
+    "master_clothes_id": 16,
+    "size": "24,5ｃｍ",
+    "master_clothes_color_id": 6,
+    "price": 2499,
+    "quantity": 0,
+    "is_pre_order": true,
+    "arrival_date": "2021-07-14T15:00:00.000Z"
+  },
+  {
+    "id": 21,
+    "master_clothes_id": 16,
+    "size": "25,0ｃｍ",
+    "master_clothes_color_id": 6,
+    "price": 2499,
+    "quantity": 0,
+    "is_pre_order": true,
+    "arrival_date": ""
+  },
+  {
+    "id": 22,
+    "master_clothes_id": 16,
+    "size": "22,5ｃｍ",
+    "master_clothes_color_id": 7,
+    "price": 2499,
+    "quantity": 50,
+    "is_pre_order": false,
+    "arrival_date": ""
+  },
+  {
+    "id": 23,
+    "master_clothes_id": 16,
+    "size": "23,0ｃｍ",
+    "master_clothes_color_id": 7,
+    "price": 2499,
+    "quantity": 30,
+    "is_pre_order": false,
+    "arrival_date": ""
+  },
+  {
+    "id": 24,
+    "master_clothes_id": 16,
+    "size": "23,5ｃｍ",
+    "master_clothes_color_id": 7,
+    "price": 2499,
+    "quantity": 20,
+    "is_pre_order": false,
+    "arrival_date": ""
+  },
+  {
+    "id": 25,
+    "master_clothes_id": 16,
+    "size": "24,0ｃｍ",
+    "master_clothes_color_id": 7,
+    "price": 2499,
+    "quantity": 50,
+    "is_pre_order": false,
+    "arrival_date": ""
+  },
+  {
+    "id": 26,
+    "master_clothes_id": 16,
+    "size": "24,5ｃｍ",
+    "master_clothes_color_id": 7,
+    "price": 2499,
+    "quantity": 30,
+    "is_pre_order": false,
+    "arrival_date": ""
+  },
+  {
+    "id": 27,
+    "master_clothes_id": 16,
+    "size": "25,0ｃｍ",
+    "master_clothes_color_id": 7,
+    "price": 2499,
+    "quantity": 0,
+    "is_pre_order": true,
+    "arrival_date": "2021-07-14T15:00:00.000Z"
+  },
+  {
+    "id": 28,
+    "master_clothes_id": 17,
+    "size": "free",
+    "master_clothes_color_id": 8,
+    "price": 699,
+    "quantity": 50,
+    "is_pre_order": false,
+    "arrival_date": ""
+  },
+  {
+    "id": 29,
+    "master_clothes_id": 17,
+    "size": "free",
+    "master_clothes_color_id": 9,
+    "price": 699,
+    "quantity": 30,
+    "is_pre_order": false,
+    "arrival_date": ""
+  }
+]
