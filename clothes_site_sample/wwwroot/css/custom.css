@@ -1,1 +1,21 @@
 @import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+}
+.flex-item:nth-child(1) {
+    -webkit-order: 1;
+    order: 1;
+    -webkit-align-self: auto;
+    align-self: auto;
+}
+.flex-item:nth-child(2) {
+    -webkit-order: 2;
+    order: 2;
+    -webkit-align-self: flex-start;
+    align-self: flex-start;
+}
