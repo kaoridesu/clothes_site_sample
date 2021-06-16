@@ -1,20 +1,20 @@
-using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 using clothes_site_sample.scripts.Bases;
 
 namespace clothes_site_sample.Scripts.Tables
 {
     public class MasterClothEntity : EntityBase
     {
-        [DataMember(Name = "id")] public int Id { get; init; }
-        [DataMember(Name = "category")] public string Category { get; init; }
-        [DataMember(Name = "kind")] public string Kind { get; init; }
-        [DataMember(Name = "product_name")] public string ProductName { get; init; }
-        [DataMember(Name = "code")] public string Code { get; init; }
-        [DataMember(Name = "material")] public string Material { get; init; }
-        [DataMember(Name = "price")] public int Price { get; init; }
-        [DataMember(Name = "point_rate")] public int PointRate { get; init; }
-        [DataMember(Name = "video_url")] public string VideoUrl { get; init; }
-        [DataMember(Name = "product_introduction")] public string ProductIntroduction { get; init; }
+        [JsonPropertyName("id")] [JsonInclude] public int Id { get; private set; }
+        [JsonPropertyName("category")] [JsonInclude] public string Category { get; private set; }
+        [JsonPropertyName("kind")] [JsonInclude] public string Kind { get; private set; }
+        [JsonPropertyName("product_name")] [JsonInclude] public string ProductName { get; private set; }
+        [JsonPropertyName("code")] [JsonInclude] public string Code { get; private set; }
+        [JsonPropertyName("material")] [JsonInclude] public string Material { get; private set; }
+        [JsonPropertyName("price")] [JsonInclude] public int Price { get; private set; }
+        [JsonPropertyName("point_rate")] [JsonInclude] public int PointRate { get; private set; }
+        [JsonPropertyName("video_url")] [JsonInclude] public string VideoUrl { get; private set; }
+        [JsonPropertyName("product_introduction")] [JsonInclude] public string ProductIntroduction { get; private set; }
 
         public MasterClothEntity()
         {

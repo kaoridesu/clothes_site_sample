@@ -1,32 +1,17 @@
+using System.Text.Json.Serialization;
 using clothes_site_sample.scripts.Bases;
 
 namespace clothes_site_sample.Scripts.Tables
 {
     public class MasterClothColorEntity : EntityBase
     {
-        private int id;
-        private int masterClothesId;
-        private string color;
-        private string imageIrl;
+        [JsonPropertyName("id")] [JsonInclude] public int Id { get; private set; }
+        [JsonPropertyName("master_cloth_id")] [JsonInclude] public int MasterClothesId { get; private set; }
+        [JsonPropertyName("color")] [JsonInclude] public string Color { get; private set; }
+        [JsonPropertyName("image_url")] [JsonInclude] public string ImageIrl { get; private set; }
 
         public MasterClothColorEntity()
         {
         }
-
-        public MasterClothColorEntity(int id, int masterClothesId, string color, string imageIrl)
-        {
-            this.id = id;
-            this.masterClothesId = masterClothesId;
-            this.color = color;
-            this.imageIrl = imageIrl;
-        }
-
-        public int Id => id;
-
-        public int MasterClothesId => masterClothesId;
-
-        public string Color => color;
-
-        public string ImageIrl => imageIrl;
     }
 }
