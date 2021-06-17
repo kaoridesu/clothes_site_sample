@@ -1,4 +1,5 @@
 ﻿@page "/"
+
 @using clothes_site_sample.Scripts.Tables
 @using clothes_site_sample.scripts.Bases
 
@@ -7,6 +8,15 @@
 @inject IRepository<MasterClothImageEntity> masterClothImageRepository
 @inject IRepository<MasterClothRelationEntity> masterClothRelationRepository
 @inject IRepository<MasterProductEntity> masterProductRepository
+
+<nav class="navbar navbar-light">
+    <div class="container d-flex justify-content-center">
+        <a class="navbar-brand text-primary" href="#">
+            <i class="fa d-inline fa-lg fa-circle-o"></i>
+            <b> BRAND-2</b>
+        </a>
+    </div>
+</nav>
 
 @code
 {
