@@ -5,6 +5,7 @@ namespace clothes_site_sample.scripts.Bases
 {
     public interface IRepository<TEntity> where TEntity : class
     {
+        void FromJson(List<TEntity> entityList);
         int Count();
         int CountBy(Predicate<TEntity> match);
         bool IsNullOrEmpty();

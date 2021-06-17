@@ -1,18 +1,21 @@
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 
 namespace clothes_site_sample.scripts.Bases
 {
     public abstract class RepositoryBase<TEntity, KRepository> : IRepository<TEntity> where TEntity : EntityBase, new()
         where KRepository : IRepository<TEntity>, new()
     {
-        private static readonly object LockObject = new object();
-        protected abstract List<TEntity> EntityList { get; }
-        private static KRepository instance;
-        public static KRepository Me => instance ??= new KRepository();
+        private static readonly object LockObject = new();
+        protected List<TEntity> EntityList { get; private set; } = new();
+
         public virtual string TableName => typeof(KRepository).Name;
         public virtual string PhysicalName => typeof(KRepository).Name;
+
+        public void FromJson(List<TEntity> entityList)
+        {
+            EntityList = entityList;
+        }
 
         public int Count() => EntityList.Count;
         public int CountBy(Predicate<TEntity> match) => FindAllBy(match).Count;

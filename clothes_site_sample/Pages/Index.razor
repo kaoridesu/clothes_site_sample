@@ -1,13 +1,21 @@
 ﻿@page "/"
+@using clothes_site_sample.Scripts.Tables
+@using clothes_site_sample.scripts.Bases
+
+@inject IRepository<MasterClothEntity> masterClothRepository
+@inject IRepository<MasterClothColorEntity> masterClothColorRepository
+@inject IRepository<MasterClothImageEntity> masterClothImageRepository
+@inject IRepository<MasterClothRelationEntity> masterClothRelationRepository
+@inject IRepository<MasterProductEntity> masterProductRepository
+
 <header class="flex-container">
     <div class="flex-item">
         1
     </div>
- 
+
 </header>
+
 @code
 {
 
 }
-
-  

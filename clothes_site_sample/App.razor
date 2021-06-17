@@ -1,9 +1,14 @@
 @using clothes_site_sample.scripts.Bases
 @using clothes_site_sample.Scripts.Tables
-@using System.Text.Json.Serialization
 @using System.Text.Json
 
+@inject Blazored.LocalStorage.ISyncLocalStorageService localStorage
+
 @inject IRepository<MasterClothEntity> masterClothRepository
+@inject IRepository<MasterClothColorEntity> masterClothColorRepository
+@inject IRepository<MasterClothImageEntity> masterClothImageRepository
+@inject IRepository<MasterClothRelationEntity> masterClothRelationRepository
+@inject IRepository<MasterProductEntity> masterProductRepository
 
 @inherits clothes_site_sample.scripts.Bases.AppComponentBase<App>
 
@@ -31,28 +36,27 @@ else
 {
     bool isLoading = true;
 
-    public class Database
-    {
-        [JsonPropertyName("[D]master_clothes")]
-        [JsonInclude]
-        public List<MasterClothEntity> MasterClothEntities { get; private set; }
-    }
-
     protected override async Task OnInitializedAsync()
     {
     // string json = await HttpClient.GetStringAsync(requestUri: "https://script.google.com/macros/s/AKfycbw_oM7K0sMnA2fYfkq98TsQt1IOsz3TfibyapxefcvLlPEfP5-pszy6G13bdl3XDjAkCw/exec");
-        string json = await HttpClient.GetStringAsync(requestUri: "master.json");
-    // var jsonElement = JsonSerializer.Deserialize<JsonElement>(json);
-    // var a = jsonElement.GetProperty("[D]master_clothes");
-    // Console.WriteLine(jsonElement.GetProperty("[D]master_clothes"));
+        string json1 = await HttpClient.GetStringAsync(requestUri: "database/master_cloth.json");
+        string json2 = await HttpClient.GetStringAsync(requestUri: "database/master_cloth_color.json");
+        string json3 = await HttpClient.GetStringAsync(requestUri: "database/master_cloth_image.json");
+        string json4 = await HttpClient.GetStringAsync(requestUri: "database/master_cloth_relation.json");
+        string json5 = await HttpClient.GetStringAsync(requestUri: "database/master_product.json");
 
-        var database = JsonSerializer.Deserialize<Database>(json);
+        masterClothRepository.FromJson(JsonSerializer.Deserialize<List<MasterClothEntity>>(json1));
+        masterClothColorRepository.FromJson(JsonSerializer.Deserialize<List<MasterClothColorEntity>>(json2));
+        masterClothImageRepository.FromJson(JsonSerializer.Deserialize<List<MasterClothImageEntity>>(json3));
+        masterClothRelationRepository.FromJson(JsonSerializer.Deserialize<List<MasterClothRelationEntity>>(json4));
+        masterProductRepository.FromJson(JsonSerializer.Deserialize<List<MasterProductEntity>>(json5));
 
-    // foreach (var entity in database.MasterClothEntities)
-    // {
-    //     Console.WriteLine(entity.Id.ToString());
-    //     Console.WriteLine(entity.ProductName.ToString());
-    // }
+    // localStorage.SetItem("testMaster", JsonSerializer.Serialize(masterClothRepository.FindAll(), serializerOptions));
+        foreach (var entity in masterClothRepository.FindAll())
+        {
+            Console.WriteLine(entity.Id.ToString());
+            Console.WriteLine(entity.ProductName.ToString());
+        }
 
         isLoading = false;
     }

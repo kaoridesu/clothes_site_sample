@@ -5,6 +5,5 @@ namespace clothes_site_sample.Scripts.Tables
 {
     public class MasterClothImageRepository : RepositoryBase<MasterClothImageEntity, MasterClothImageRepository>
     {
-        protected override List<MasterClothImageEntity> EntityList { get; } = new();
     }
 }

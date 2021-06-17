@@ -5,6 +5,5 @@ namespace clothes_site_sample.Scripts.Tables
 {
     public class MasterClothColorRepository : RepositoryBase<MasterClothColorEntity, MasterClothColorRepository>
     {
-        protected override List<MasterClothColorEntity> EntityList { get; } = new();
     }
 }

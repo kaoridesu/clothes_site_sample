@@ -3,6 +3,10 @@ using System.Net.Http;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Text;
+using System.Text.Encodings.Web;
+using System.Text.Json;
+using System.Text.Unicode;
+using Blazored.LocalStorage;
 using clothes_site_sample.scripts.Bases;
 using clothes_site_sample.Scripts.Tables;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
@@ -22,7 +26,24 @@ namespace clothes_site_sample
             builder.Services.AddScoped(
                 sp => new HttpClient {BaseAddress = new Uri(builder.HostEnvironment.BaseAddress)});
 
-            builder.Services.AddSingleton<IRepository<MasterClothEntity>>(new MasterClothRepository());
+            // Debugとかで分ける
+            builder.Services.AddBlazoredLocalStorage(config =>
+            {
+                config.JsonSerializerOptions.DictionaryKeyPolicy = JsonNamingPolicy.CamelCase;
+                config.JsonSerializerOptions.IgnoreNullValues = true;
+                config.JsonSerializerOptions.IgnoreReadOnlyProperties = true;
+                config.JsonSerializerOptions.PropertyNameCaseInsensitive = true;
+                config.JsonSerializerOptions.PropertyNamingPolicy = JsonNamingPolicy.CamelCase;
+                config.JsonSerializerOptions.ReadCommentHandling = JsonCommentHandling.Skip;
+                config.JsonSerializerOptions.WriteIndented = false;
+                config.JsonSerializerOptions.Encoder = JavaScriptEncoder.Create(UnicodeRanges.All);
+            });
+
+            builder.Services.AddSingleton<IRepository<MasterClothEntity>, MasterClothRepository>();
+            builder.Services.AddSingleton<IRepository<MasterClothColorEntity>, MasterClothColorRepository>();
+            builder.Services.AddSingleton<IRepository<MasterClothImageEntity>, MasterClothImageRepository>();
+            builder.Services.AddSingleton<IRepository<MasterClothRelationEntity>, MasterClothRelationRepository>();
+            builder.Services.AddSingleton<IRepository<MasterProductEntity>, MasterProductRepository>();
 
             await builder.Build().RunAsync();
         }

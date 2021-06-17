@@ -5,6 +5,5 @@ namespace clothes_site_sample.Scripts.Tables
 {
     public class MasterProductRepository : RepositoryBase<MasterProductEntity, MasterProductRepository>
     {
-        protected override List<MasterProductEntity> EntityList { get; } = new();
     }
 }
