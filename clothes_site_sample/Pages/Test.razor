@@ -1,6 +1,46 @@
 @page "/test"
+@using clothes_site_sample.scripts.Bases
+@using clothes_site_sample.Scripts.Tables
+
+@inject IRepository<MasterClothEntity> masterClothRepository
+@inject IRepository<MasterClothColorEntity> masterClothColorRepository
+@inject IRepository<MasterClothImageEntity> masterClothImageRepository
+@inject IRepository<MasterClothRelationEntity> masterClothRelationRepository
+@inject IRepository<MasterProductEntity> masterProductRepository
+
+@inherits clothes_site_sample.scripts.Bases.AppComponentBase<Test>
+
 <h3 class="header">Test</h3>
 
+@foreach (var entity in masterClothRepository.FindAll())
+{
+    <div>@entity.ProductName</div>
+}
+
+@foreach (var entity in masterClothColorRepository.FindAll())
+{
+    <div>@entity.ImageIrl</div>
+}
+
+@foreach (var entity in masterClothImageRepository.FindAll())
+{
+    <div>@entity.Url</div>
+}
+
+@foreach (var entity in masterClothRelationRepository.FindAll())
+{
+    <div>@entity.MasterClothId</div>
+}
+
+@foreach (var entity in masterProductRepository.FindAll())
+{
+    <div>@entity.Quantity</div>
+}
+
 @code {
+
+    protected override void OnInitialized()
+    {
+    }
 
 }
