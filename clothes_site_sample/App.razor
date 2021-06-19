@@ -37,12 +37,16 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-    // string json = await HttpClient.GetStringAsync(requestUri: "https://script.google.com/macros/s/AKfycbw_oM7K0sMnA2fYfkq98TsQt1IOsz3TfibyapxefcvLlPEfP5-pszy6G13bdl3XDjAkCw/exec");
     // string json1 = await HttpClient.GetStringAsync(requestUri: "database/master_cloth.json");
     // string json2 = await HttpClient.GetStringAsync(requestUri: "database/master_cloth_color.json");
     // string json3 = await HttpClient.GetStringAsync(requestUri: "database/master_cloth_image.json");
     // string json4 = await HttpClient.GetStringAsync(requestUri: "database/master_cloth_relation.json");
     // string json5 = await HttpClient.GetStringAsync(requestUri: "database/master_product.json");
+
+    // マスターデータをスプレッドシートから取る場合はこちら
+    // string json = await HttpClient.GetStringAsync(requestUri: "https://script.google.com/macros/s/AKfycbw_oM7K0sMnA2fYfkq98TsQt1IOsz3TfibyapxefcvLlPEfP5-pszy6G13bdl3XDjAkCw/exec");
+
+    // マスターデータをプロジェクトから取る場合はこちら
         string json = await HttpClient.GetStringAsync("database/master_1.json");
 
         JsonElement jsonElement = JsonSerializer.Deserialize<JsonElement>(json);
