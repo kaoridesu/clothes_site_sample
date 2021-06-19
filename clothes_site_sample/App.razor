@@ -3,7 +3,7 @@
 
 @inject Blazored.LocalStorage.ISyncLocalStorageService localStorage
 
-@inject MasterClothRepository MasterClothRepository
+@inject MasterClothRepository masterClothRepository
 @inject MasterClothColorRepository masterClothColorRepository
 @inject MasterClothImageRepository masterClothImageRepository
 @inject MasterClothRelationRepository masterClothRelationRepository
@@ -38,24 +38,31 @@ else
     protected override async Task OnInitializedAsync()
     {
     // string json = await HttpClient.GetStringAsync(requestUri: "https://script.google.com/macros/s/AKfycbw_oM7K0sMnA2fYfkq98TsQt1IOsz3TfibyapxefcvLlPEfP5-pszy6G13bdl3XDjAkCw/exec");
-        string json1 = await HttpClient.GetStringAsync(requestUri: "database/master_cloth.json");
-        string json2 = await HttpClient.GetStringAsync(requestUri: "database/master_cloth_color.json");
-        string json3 = await HttpClient.GetStringAsync(requestUri: "database/master_cloth_image.json");
-        string json4 = await HttpClient.GetStringAsync(requestUri: "database/master_cloth_relation.json");
-        string json5 = await HttpClient.GetStringAsync(requestUri: "database/master_product.json");
+    // string json1 = await HttpClient.GetStringAsync(requestUri: "database/master_cloth.json");
+    // string json2 = await HttpClient.GetStringAsync(requestUri: "database/master_cloth_color.json");
+    // string json3 = await HttpClient.GetStringAsync(requestUri: "database/master_cloth_image.json");
+    // string json4 = await HttpClient.GetStringAsync(requestUri: "database/master_cloth_relation.json");
+    // string json5 = await HttpClient.GetStringAsync(requestUri: "database/master_product.json");
+        string json = await HttpClient.GetStringAsync("database/master_1.json");
 
-        MasterClothRepository.FromJson(JsonSerializer.Deserialize<List<MasterClothEntity>>(json1));
-        masterClothColorRepository.FromJson(JsonSerializer.Deserialize<List<MasterClothColorEntity>>(json2));
-        masterClothImageRepository.FromJson(JsonSerializer.Deserialize<List<MasterClothImageEntity>>(json3));
-        masterClothRelationRepository.FromJson(JsonSerializer.Deserialize<List<MasterClothRelationEntity>>(json4));
-        masterProductRepository.FromJson(JsonSerializer.Deserialize<List<MasterProductEntity>>(json5));
+        JsonElement jsonElement = JsonSerializer.Deserialize<JsonElement>(json);
+        masterClothRepository.FromJson(JsonSerializer.Deserialize<List<MasterClothEntity>>(jsonElement.GetProperty("[D]master_clothes").ToString()!));
+        masterClothColorRepository.FromJson(JsonSerializer.Deserialize<List<MasterClothColorEntity>>(jsonElement.GetProperty("[D]master_clothes_color").ToString()!));
+        masterClothImageRepository.FromJson(JsonSerializer.Deserialize<List<MasterClothImageEntity>>(jsonElement.GetProperty("[D]master_clothes_image").ToString()!));
+        masterClothRelationRepository.FromJson(JsonSerializer.Deserialize<List<MasterClothRelationEntity>>(jsonElement.GetProperty("[D]master_clothes_relation").ToString()!));
+        masterProductRepository.FromJson(JsonSerializer.Deserialize<List<MasterProductEntity>>(jsonElement.GetProperty("[D]master_product").ToString()!));
+    // masterClothRepository.FromJson(JsonSerializer.Deserialize<List<MasterClothEntity>>(json1));
+    // masterClothColorRepository.FromJson(JsonSerializer.Deserialize<List<MasterClothColorEntity>>(json2));
+    // masterClothImageRepository.FromJson(JsonSerializer.Deserialize<List<MasterClothImageEntity>>(json3));
+    // masterClothRelationRepository.FromJson(JsonSerializer.Deserialize<List<MasterClothRelationEntity>>(json4));
+    // masterProductRepository.FromJson(JsonSerializer.Deserialize<List<MasterProductEntity>>(json5));
 
     // localStorage.SetItem("testMaster", JsonSerializer.Serialize(masterClothRepository.FindAll(), serializerOptions));
-        foreach (var entity in MasterClothRepository.FindAll())
-        {
-            Console.WriteLine(entity.Id.ToString());
-            Console.WriteLine(entity.ProductName.ToString());
-        }
+    // foreach (var entity in masterClothRepository.FindAll())
+    // {
+    //     Console.WriteLine(entity.Id.ToString());
+    //     Console.WriteLine(entity.ProductName.ToString());
+    // }
 
         isLoading = false;
     }

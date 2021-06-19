@@ -1,0 +1,772 @@
+{
+	"[D]master_clothes": [
+		{
+			"id": 1,
+			"category": "トップス",
+			"kind": "無し",
+			"product_name": "花柄のブラウス",
+			"code": "",
+			"material": "コットン",
+			"price": 0,
+			"point_rate": 2,
+			"video_url": "",
+			"product_introduction": "着回しができます"
+		},
+		{
+			"id": 2,
+			"category": "アウター",
+			"kind": "無し",
+			"product_name": "無地のアウター",
+			"code": "",
+			"material": "コットン",
+			"price": 0,
+			"point_rate": 3,
+			"video_url": "",
+			"product_introduction": "着回しができます"
+		},
+		{
+			"id": 3,
+			"category": "パンツ",
+			"kind": "無し",
+			"product_name": "スレット入りパンツ",
+			"code": "",
+			"material": "コットン",
+			"price": 0,
+			"point_rate": 4,
+			"video_url": "",
+			"product_introduction": "履きやすいです"
+		},
+		{
+			"id": 4,
+			"category": "ワンピース",
+			"kind": "無し",
+			"product_name": "パステルカラーワンピ",
+			"code": "",
+			"material": "コットン",
+			"price": 0,
+			"point_rate": 5,
+			"video_url": "",
+			"product_introduction": "着回しができます"
+		},
+		{
+			"id": 5,
+			"category": "靴",
+			"kind": "無し",
+			"product_name": "厚底ブーツ",
+			"code": "",
+			"material": "レザー",
+			"price": 0,
+			"point_rate": 6,
+			"video_url": "",
+			"product_introduction": "履きやすいです"
+		},
+		{
+			"id": 6,
+			"category": "バック",
+			"kind": "無し",
+			"product_name": "ハンドバッグ",
+			"code": "",
+			"material": "コットン",
+			"price": 0,
+			"point_rate": 7,
+			"video_url": "",
+			"product_introduction": "着回しができます"
+		},
+		{
+			"id": 7,
+			"category": "アウター",
+			"kind": "無し",
+			"product_name": "ストライプのアウター",
+			"code": "",
+			"material": "コットン",
+			"price": 0,
+			"point_rate": 8,
+			"video_url": "",
+			"product_introduction": "着回しができます"
+		},
+		{
+			"id": 8,
+			"category": "ワンピース",
+			"kind": "無し",
+			"product_name": "フレアワンピ",
+			"code": "",
+			"material": "コットン",
+			"price": 0,
+			"point_rate": 9,
+			"video_url": "",
+			"product_introduction": "着回しができます"
+		},
+		{
+			"id": 9,
+			"category": "パンツ",
+			"kind": "無し",
+			"product_name": "ストレッチパンツ",
+			"code": "",
+			"material": "コットン",
+			"price": 0,
+			"point_rate": 10,
+			"video_url": "",
+			"product_introduction": "着回しができます"
+		},
+		{
+			"id": 10,
+			"category": "バック",
+			"kind": "無し",
+			"product_name": "トートバッグ",
+			"code": "",
+			"material": "レザー",
+			"price": 0,
+			"point_rate": 11,
+			"video_url": "",
+			"product_introduction": "履きやすいです"
+		},
+		{
+			"id": 11,
+			"category": "トップス",
+			"kind": "無し",
+			"product_name": "長袖Tシャツ",
+			"code": "",
+			"material": "コットン",
+			"price": 0,
+			"point_rate": 12,
+			"video_url": "",
+			"product_introduction": "着回しができます"
+		},
+		{
+			"id": 12,
+			"category": "トップス",
+			"kind": "無し",
+			"product_name": "半袖Tシャツ",
+			"code": "",
+			"material": "コットン",
+			"price": 0,
+			"point_rate": 13,
+			"video_url": "",
+			"product_introduction": "着回しができます"
+		},
+		{
+			"id": 13,
+			"category": "靴",
+			"kind": "無し",
+			"product_name": "サンダル",
+			"code": "",
+			"material": "レザー",
+			"price": 0,
+			"point_rate": 14,
+			"video_url": "",
+			"product_introduction": "履きやすいです"
+		},
+		{
+			"id": 14,
+			"category": "ワンピース",
+			"kind": "無し",
+			"product_name": "タイトワンピース",
+			"code": "",
+			"material": "コットン",
+			"price": 0,
+			"point_rate": 15,
+			"video_url": "",
+			"product_introduction": "着回しができます"
+		},
+		{
+			"id": 15,
+			"category": "ワンピース",
+			"kind": "無地",
+			"product_name": "ボリュームティアードシャツワンピース",
+			"code": "k8799w",
+			"material": "コットン",
+			"price": 1999,
+			"point_rate": 5,
+			"video_url": "https://youtu.be/UbNtGgK4cxY",
+			"product_introduction": "ギャザーを寄せたボリューミーなティアードデザインが大人ガーリーな印象。\nゆったりしたAラインのシルエットはリラクシーな着心地。\n短めの丈感なのでブーツやボトムを合わせても◎\n\nモデル 今田美桜 tall:157cm(サイズ S)\nサイズS\n着丈【83cm】\n身幅【54cm】\n肩幅【33cm】\n袖丈【31.5cm】\n\nサイズM\n着丈【85cm】\n身幅【56cm】\n肩幅【34cm】\n袖丈【32.5cm】\n\nサイズL\n着丈【85cm】\n身幅【58cm】\n肩幅【35cm】\n袖丈【33.5cm】\n"
+		},
+		{
+			"id": 16,
+			"category": "靴",
+			"kind": "ショートブーツ",
+			"product_name": "厚底レースアップシューズ",
+			"code": "zr794",
+			"material": "ポリウレタン",
+			"price": 2499,
+			"point_rate": 5,
+			"video_url": "",
+			"product_introduction": "ごつめのタンクソールはスタイリングにスパイスを加えたいときにピッタリ。\nレースアップで足元からお洒落を盛り上げる。\nやや光沢感のあるフェイクレザーはコーデをワンランク上に格上げ。\nソールに高低差があまりないので、疲れにくい履き心地。\nサイドファスナー付きで、履脱も楽々。\nモデル マーシュ彩 tall:161cm\nモデル 今田美桜 tall:157cm\nモデル 加藤ナナ tall:156cm\nモデル 愛花 tall:163cm\n22.5cm 履口【22.5cm】底幅【9.8cm】\n23.0cm 履口【23.0cm】底幅【10.0cm】\n23.5cm 履口【23.5cm】底幅【10.2cm】\n24.0cm 履口【24.0cm】底幅【10.4cm】\n24.5cm 履口【24.5cm】底幅【10.6cm】\n25.0cm 履口【25.0cm】底幅【10.8cm】\n\nヒール【5.0cm】筒丈【15cm】ストーム【3cm】\n"
+		},
+		{
+			"id": 17,
+			"category": "アクセサリー",
+			"kind": "ピアス・リング",
+			"product_name": "2連変形フープピアス",
+			"code": "ae3328",
+			"material": "不明",
+			"price": 699,
+			"point_rate": 5,
+			"video_url": "",
+			"product_introduction": "ツイストしたデザインがこなれた雰囲気を醸し出す。\nマットな艶感のある素材は高見えのポイント。\n大きさの異なるフープでスタイリッシュな存在感を放つ。\n小さすぎず、大きすぎないので、使いやすさ抜群。\n\n★素材の特性上、カラーが、写真と多少異なる場合があります。\nモデル 宮田聡子 tall:170cm\nモデル 今田美桜 tall:157cm\nモデル マーシュ彩 tall:161cm\nサイズF\nスクエアモチーフ 直径【2.1cm】【3.1cm】"
+		}
+	],
+	"[D]master_clothes_color": [
+		{
+			"id": 1,
+			"master_clothes_id": 15,
+			"color": "ブラック",
+			"image_url": "https://cdn.grail.bz/images/goods/t/k8799w/k8799w_col_11.jpg"
+		},
+		{
+			"id": 2,
+			"master_clothes_id": 15,
+			"color": "ブルー",
+			"image_url": "https://cdn.grail.bz/images/goods/t/k8799w/k8799w_col_15.jpg"
+		},
+		{
+			"id": 3,
+			"master_clothes_id": 15,
+			"color": "オフホワイト",
+			"image_url": "https://cdn.grail.bz/images/goods/t/k8799w/k8799w_col_59.jpg"
+		},
+		{
+			"id": 4,
+			"master_clothes_id": 15,
+			"color": "モカ",
+			"image_url": "https://cdn.grail.bz/images/goods/t/k8799w/k8799w_col_561.jpg"
+		},
+		{
+			"id": 5,
+			"master_clothes_id": 15,
+			"color": "グレージュ",
+			"image_url": "https://cdn.grail.bz/images/goods/t/k8799w/k8799w_col_588.jpg"
+		},
+		{
+			"id": 6,
+			"master_clothes_id": 16,
+			"color": "ブラック",
+			"image_url": "https://cdn.grail.bz/images/goods/t/k8799w/k8799w_col_561.jpg"
+		},
+		{
+			"id": 7,
+			"master_clothes_id": 16,
+			"color": "ホワイト",
+			"image_url": "https://cdn.grail.bz/images/goods/t/k8799w/k8799w_col_588.jpg"
+		},
+		{
+			"id": 8,
+			"master_clothes_id": 17,
+			"color": "シルバー",
+			"image_url": "https://cdn.grail.bz/images/goods/d/ae3328/ae3328_u.jpg"
+		},
+		{
+			"id": 9,
+			"master_clothes_id": 17,
+			"color": "ゴールド",
+			"image_url": "https://cdn.grail.bz/images/goods/t/ae3328/ae3328_col_58.jpg"
+		}
+	],
+	"[D]master_clothes_image": [
+		{
+			"id": 1,
+			"master_clothes_id": 15,
+			"url": "https://cdn.grail.bz/images/goods/t/k8799w/k8799w_v1.jpg",
+			"is_main": true,
+			"is_sub": false
+		},
+		{
+			"id": 2,
+			"master_clothes_id": 15,
+			"url": "https://cdn.grail.bz/images/goods/t/k8799w/k8799w_v2.jpg\n",
+			"is_main": false,
+			"is_sub": false
+		},
+		{
+			"id": 3,
+			"master_clothes_id": 15,
+			"url": "https://cdn.grail.bz/images/goods/t/k8799w/k8799w_v3.jpg",
+			"is_main": false,
+			"is_sub": false
+		},
+		{
+			"id": 4,
+			"master_clothes_id": 15,
+			"url": "https://cdn.grail.bz/images/goods/t/k8799w/k8799w_v4.jpg",
+			"is_main": false,
+			"is_sub": false
+		},
+		{
+			"id": 5,
+			"master_clothes_id": 15,
+			"url": "https://cdn.grail.bz/images/goods/t/k8799w/k8799w_v5.jpg",
+			"is_main": false,
+			"is_sub": false
+		},
+		{
+			"id": 6,
+			"master_clothes_id": 15,
+			"url": "https://cdn.grail.bz/images/goods/t/k8799w/k8799w_v6.jpg",
+			"is_main": false,
+			"is_sub": true
+		},
+		{
+			"id": 7,
+			"master_clothes_id": 15,
+			"url": "https://cdn.grail.bz/images/goods/t/k8799w/k8799w_v7.jpg",
+			"is_main": false,
+			"is_sub": false
+		},
+		{
+			"id": 8,
+			"master_clothes_id": 15,
+			"url": "https://cdn.grail.bz/images/goods/t/k8799w/k8799w_v8.jpg",
+			"is_main": false,
+			"is_sub": false
+		},
+		{
+			"id": 9,
+			"master_clothes_id": 15,
+			"url": "https://cdn.grail.bz/images/goods/t/k8799w/k8799w_v9.jpg",
+			"is_main": false,
+			"is_sub": false
+		},
+		{
+			"id": 10,
+			"master_clothes_id": 15,
+			"url": "https://cdn.grail.bz/images/goods/t/k8799w/k8799w_v10.jpg",
+			"is_main": false,
+			"is_sub": false
+		},
+		{
+			"id": 11,
+			"master_clothes_id": 16,
+			"url": "https://cdn.grail.bz/images/goods/t/zr794/zr794_v1.jpg",
+			"is_main": true,
+			"is_sub": false
+		},
+		{
+			"id": 12,
+			"master_clothes_id": 16,
+			"url": "https://cdn.grail.bz/images/goods/t/zr794/zr794_v2.jpg",
+			"is_main": false,
+			"is_sub": false
+		},
+		{
+			"id": 13,
+			"master_clothes_id": 16,
+			"url": "https://cdn.grail.bz/images/goods/t/zr794/zr794_v3.jpg",
+			"is_main": false,
+			"is_sub": false
+		},
+		{
+			"id": 14,
+			"master_clothes_id": 16,
+			"url": "https://cdn.grail.bz/images/goods/t/zr794/zr794_v4.jpg",
+			"is_main": false,
+			"is_sub": false
+		},
+		{
+			"id": 15,
+			"master_clothes_id": 16,
+			"url": "https://cdn.grail.bz/images/goods/t/zr794/zr794_v5.jpg",
+			"is_main": false,
+			"is_sub": false
+		},
+		{
+			"id": 16,
+			"master_clothes_id": 16,
+			"url": "https://cdn.grail.bz/images/goods/t/zr794/zr794_v6.jpg",
+			"is_main": false,
+			"is_sub": false
+		},
+		{
+			"id": 17,
+			"master_clothes_id": 16,
+			"url": "https://cdn.grail.bz/images/goods/t/zr794/zr794_v7.jpg",
+			"is_main": false,
+			"is_sub": false
+		},
+		{
+			"id": 18,
+			"master_clothes_id": 16,
+			"url": "https://cdn.grail.bz/images/goods/t/zr794/zr794_v8.jpg",
+			"is_main": false,
+			"is_sub": false
+		},
+		{
+			"id": 19,
+			"master_clothes_id": 16,
+			"url": "https://cdn.grail.bz/images/goods/t/zr794/zr794_v9.jpg",
+			"is_main": false,
+			"is_sub": false
+		},
+		{
+			"id": 20,
+			"master_clothes_id": 16,
+			"url": "https://cdn.grail.bz/images/goods/t/zr794/zr794_v10.jpg",
+			"is_main": false,
+			"is_sub": false
+		},
+		{
+			"id": 21,
+			"master_clothes_id": 16,
+			"url": "https://cdn.grail.bz/images/goods/t/zr794/zr794_v11.jpg",
+			"is_main": false,
+			"is_sub": false
+		},
+		{
+			"id": 22,
+			"master_clothes_id": 17,
+			"url": "https://cdn.grail.bz/images/goods/t/ae3328/ae3328_v1.jpg",
+			"is_main": true,
+			"is_sub": true
+		},
+		{
+			"id": 23,
+			"master_clothes_id": 17,
+			"url": "https://cdn.grail.bz/images/goods/t/ae3328/ae3328_v2.jpg",
+			"is_main": false,
+			"is_sub": false
+		},
+		{
+			"id": 24,
+			"master_clothes_id": 17,
+			"url": "https://cdn.grail.bz/images/goods/t/ae3328/ae3328_v3.jpg",
+			"is_main": false,
+			"is_sub": false
+		},
+		{
+			"id": 25,
+			"master_clothes_id": 17,
+			"url": "https://cdn.grail.bz/images/goods/t/ae3328/ae3328_v10.jpg",
+			"is_main": false,
+			"is_sub": false
+		},
+		{
+			"id": 26,
+			"master_clothes_id": 17,
+			"url": "https://cdn.grail.bz/images/goods/t/ae3328/ae3328_v11.jpg",
+			"is_main": false,
+			"is_sub": false
+		}
+	],
+	"[D]master_product": [
+		{
+			"id": 1,
+			"master_clothes_id": 15,
+			"size": "s",
+			"master_clothes_color_id": 1,
+			"price": 1999,
+			"quantity": 50,
+			"is_pre_order": false,
+			"arrival_date": ""
+		},
+		{
+			"id": 2,
+			"master_clothes_id": 15,
+			"size": "m",
+			"master_clothes_color_id": 1,
+			"price": 1999,
+			"quantity": 30,
+			"is_pre_order": false,
+			"arrival_date": ""
+		},
+		{
+			"id": 3,
+			"master_clothes_id": 15,
+			"size": "l",
+			"master_clothes_color_id": 1,
+			"price": 1999,
+			"quantity": 20,
+			"is_pre_order": false,
+			"arrival_date": ""
+		},
+		{
+			"id": 4,
+			"master_clothes_id": 15,
+			"size": "s",
+			"master_clothes_color_id": 2,
+			"price": 1999,
+			"quantity": 0,
+			"is_pre_order": true,
+			"arrival_date": "2021-06-14T15:00:00.000Z"
+		},
+		{
+			"id": 5,
+			"master_clothes_id": 15,
+			"size": "m",
+			"master_clothes_color_id": 2,
+			"price": 1999,
+			"quantity": 0,
+			"is_pre_order": true,
+			"arrival_date": "2021-06-14T15:00:00.000Z"
+		},
+		{
+			"id": 6,
+			"master_clothes_id": 15,
+			"size": "l",
+			"master_clothes_color_id": 2,
+			"price": 1999,
+			"quantity": 0,
+			"is_pre_order": true,
+			"arrival_date": "2021-06-14T15:00:00.000Z"
+		},
+		{
+			"id": 7,
+			"master_clothes_id": 15,
+			"size": "s",
+			"master_clothes_color_id": 3,
+			"price": 1999,
+			"quantity": 50,
+			"is_pre_order": false,
+			"arrival_date": ""
+		},
+		{
+			"id": 8,
+			"master_clothes_id": 15,
+			"size": "m",
+			"master_clothes_color_id": 3,
+			"price": 1999,
+			"quantity": 30,
+			"is_pre_order": false,
+			"arrival_date": ""
+		},
+		{
+			"id": 9,
+			"master_clothes_id": 15,
+			"size": "l",
+			"master_clothes_color_id": 3,
+			"price": 1999,
+			"quantity": 20,
+			"is_pre_order": false,
+			"arrival_date": ""
+		},
+		{
+			"id": 10,
+			"master_clothes_id": 15,
+			"size": "s",
+			"master_clothes_color_id": 4,
+			"price": 1999,
+			"quantity": 50,
+			"is_pre_order": false,
+			"arrival_date": ""
+		},
+		{
+			"id": 11,
+			"master_clothes_id": 15,
+			"size": "m",
+			"master_clothes_color_id": 4,
+			"price": 1999,
+			"quantity": 30,
+			"is_pre_order": false,
+			"arrival_date": ""
+		},
+		{
+			"id": 12,
+			"master_clothes_id": 15,
+			"size": "l",
+			"master_clothes_color_id": 4,
+			"price": 1999,
+			"quantity": 20,
+			"is_pre_order": false,
+			"arrival_date": ""
+		},
+		{
+			"id": 13,
+			"master_clothes_id": 15,
+			"size": "s",
+			"master_clothes_color_id": 5,
+			"price": 1999,
+			"quantity": 50,
+			"is_pre_order": false,
+			"arrival_date": ""
+		},
+		{
+			"id": 14,
+			"master_clothes_id": 15,
+			"size": "m",
+			"master_clothes_color_id": 5,
+			"price": 1999,
+			"quantity": 30,
+			"is_pre_order": false,
+			"arrival_date": ""
+		},
+		{
+			"id": 15,
+			"master_clothes_id": 15,
+			"size": "l",
+			"master_clothes_color_id": 5,
+			"price": 1999,
+			"quantity": 20,
+			"is_pre_order": false,
+			"arrival_date": ""
+		},
+		{
+			"id": 16,
+			"master_clothes_id": 16,
+			"size": "22,5ｃｍ",
+			"master_clothes_color_id": 6,
+			"price": 2499,
+			"quantity": 0,
+			"is_pre_order": true,
+			"arrival_date": "2021-07-14T15:00:00.000Z"
+		},
+		{
+			"id": 17,
+			"master_clothes_id": 16,
+			"size": "23,0ｃｍ",
+			"master_clothes_color_id": 6,
+			"price": 2499,
+			"quantity": 0,
+			"is_pre_order": true,
+			"arrival_date": "2021-07-14T15:00:00.000Z"
+		},
+		{
+			"id": 18,
+			"master_clothes_id": 16,
+			"size": "23,5ｃｍ",
+			"master_clothes_color_id": 6,
+			"price": 2499,
+			"quantity": 0,
+			"is_pre_order": true,
+			"arrival_date": "2021-07-14T15:00:00.000Z"
+		},
+		{
+			"id": 19,
+			"master_clothes_id": 16,
+			"size": "24,0ｃｍ",
+			"master_clothes_color_id": 6,
+			"price": 2499,
+			"quantity": 0,
+			"is_pre_order": true,
+			"arrival_date": "2021-07-14T15:00:00.000Z"
+		},
+		{
+			"id": 20,
+			"master_clothes_id": 16,
+			"size": "24,5ｃｍ",
+			"master_clothes_color_id": 6,
+			"price": 2499,
+			"quantity": 0,
+			"is_pre_order": true,
+			"arrival_date": "2021-07-14T15:00:00.000Z"
+		},
+		{
+			"id": 21,
+			"master_clothes_id": 16,
+			"size": "25,0ｃｍ",
+			"master_clothes_color_id": 6,
+			"price": 2499,
+			"quantity": 0,
+			"is_pre_order": true,
+			"arrival_date": ""
+		},
+		{
+			"id": 22,
+			"master_clothes_id": 16,
+			"size": "22,5ｃｍ",
+			"master_clothes_color_id": 7,
+			"price": 2499,
+			"quantity": 50,
+			"is_pre_order": false,
+			"arrival_date": ""
+		},
+		{
+			"id": 23,
+			"master_clothes_id": 16,
+			"size": "23,0ｃｍ",
+			"master_clothes_color_id": 7,
+			"price": 2499,
+			"quantity": 30,
+			"is_pre_order": false,
+			"arrival_date": ""
+		},
+		{
+			"id": 24,
+			"master_clothes_id": 16,
+			"size": "23,5ｃｍ",
+			"master_clothes_color_id": 7,
+			"price": 2499,
+			"quantity": 20,
+			"is_pre_order": false,
+			"arrival_date": ""
+		},
+		{
+			"id": 25,
+			"master_clothes_id": 16,
+			"size": "24,0ｃｍ",
+			"master_clothes_color_id": 7,
+			"price": 2499,
+			"quantity": 50,
+			"is_pre_order": false,
+			"arrival_date": ""
+		},
+		{
+			"id": 26,
+			"master_clothes_id": 16,
+			"size": "24,5ｃｍ",
+			"master_clothes_color_id": 7,
+			"price": 2499,
+			"quantity": 30,
+			"is_pre_order": false,
+			"arrival_date": ""
+		},
+		{
+			"id": 27,
+			"master_clothes_id": 16,
+			"size": "25,0ｃｍ",
+			"master_clothes_color_id": 7,
+			"price": 2499,
+			"quantity": 0,
+			"is_pre_order": true,
+			"arrival_date": "2021-07-14T15:00:00.000Z"
+		},
+		{
+			"id": 28,
+			"master_clothes_id": 17,
+			"size": "free",
+			"master_clothes_color_id": 8,
+			"price": 699,
+			"quantity": 50,
+			"is_pre_order": false,
+			"arrival_date": ""
+		},
+		{
+			"id": 29,
+			"master_clothes_id": 17,
+			"size": "free",
+			"master_clothes_color_id": 9,
+			"price": 699,
+			"quantity": 30,
+			"is_pre_order": false,
+			"arrival_date": ""
+		}
+	],
+	"[D]master_clothes_relation": [
+		{
+			"id": 1,
+			"master_clothes_id": 15,
+			"master_clothes_relation_id": 16
+		},
+		{
+			"id": 2,
+			"master_clothes_id": 15,
+			"master_clothes_relation_id": 17
+		},
+		{
+			"id": 3,
+			"master_clothes_id": 16,
+			"master_clothes_relation_id": 15
+		},
+		{
+			"id": 4,
+			"master_clothes_id": 16,
+			"master_clothes_relation_id": 17
+		},
+		{
+			"id": 5,
+			"master_clothes_id": 17,
+			"master_clothes_relation_id": 15
+		},
+		{
+			"id": 6,
+			"master_clothes_id": 17,
+			"master_clothes_relation_id": 16
+		}
+	]
+}

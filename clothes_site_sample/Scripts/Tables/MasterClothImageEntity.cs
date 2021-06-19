@@ -10,7 +10,7 @@ namespace clothes_site_sample.Scripts.Tables
         [JsonPropertyName("url")] [JsonInclude] public string Url { get; private set; }
         [JsonPropertyName("in_main")] [JsonInclude] public string InMain { get; private set; }
         [JsonPropertyName("in_sub")] [JsonInclude] public string InSub { get; private set; }
-        
+
 
         public MasterClothImageEntity()
         {
