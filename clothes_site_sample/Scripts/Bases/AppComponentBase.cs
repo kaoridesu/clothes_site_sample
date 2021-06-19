@@ -1,4 +1,5 @@
 using System.Net.Http;
+using clothes_site_sample.Scripts.Tables;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.Logging;
 

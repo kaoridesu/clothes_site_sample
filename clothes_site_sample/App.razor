@@ -1,14 +1,13 @@
-@using clothes_site_sample.scripts.Bases
 @using clothes_site_sample.Scripts.Tables
 @using System.Text.Json
 
 @inject Blazored.LocalStorage.ISyncLocalStorageService localStorage
 
-@inject IRepository<MasterClothEntity> masterClothRepository
-@inject IRepository<MasterClothColorEntity> masterClothColorRepository
-@inject IRepository<MasterClothImageEntity> masterClothImageRepository
-@inject IRepository<MasterClothRelationEntity> masterClothRelationRepository
-@inject IRepository<MasterProductEntity> masterProductRepository
+@inject MasterClothRepository MasterClothRepository
+@inject MasterClothColorRepository masterClothColorRepository
+@inject MasterClothImageRepository masterClothImageRepository
+@inject MasterClothRelationRepository masterClothRelationRepository
+@inject MasterProductRepository masterProductRepository
 
 @inherits clothes_site_sample.scripts.Bases.AppComponentBase<App>
 
@@ -45,14 +44,14 @@ else
         string json4 = await HttpClient.GetStringAsync(requestUri: "database/master_cloth_relation.json");
         string json5 = await HttpClient.GetStringAsync(requestUri: "database/master_product.json");
 
-        masterClothRepository.FromJson(JsonSerializer.Deserialize<List<MasterClothEntity>>(json1));
+        MasterClothRepository.FromJson(JsonSerializer.Deserialize<List<MasterClothEntity>>(json1));
         masterClothColorRepository.FromJson(JsonSerializer.Deserialize<List<MasterClothColorEntity>>(json2));
         masterClothImageRepository.FromJson(JsonSerializer.Deserialize<List<MasterClothImageEntity>>(json3));
         masterClothRelationRepository.FromJson(JsonSerializer.Deserialize<List<MasterClothRelationEntity>>(json4));
         masterProductRepository.FromJson(JsonSerializer.Deserialize<List<MasterProductEntity>>(json5));
 
     // localStorage.SetItem("testMaster", JsonSerializer.Serialize(masterClothRepository.FindAll(), serializerOptions));
-        foreach (var entity in masterClothRepository.FindAll())
+        foreach (var entity in MasterClothRepository.FindAll())
         {
             Console.WriteLine(entity.Id.ToString());
             Console.WriteLine(entity.ProductName.ToString());

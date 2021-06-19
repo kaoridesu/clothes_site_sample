@@ -1,13 +1,12 @@
 ﻿@page "/"
 
 @using clothes_site_sample.Scripts.Tables
-@using clothes_site_sample.scripts.Bases
 
-@inject IRepository<MasterClothEntity> masterClothRepository
-@inject IRepository<MasterClothColorEntity> masterClothColorRepository
-@inject IRepository<MasterClothImageEntity> masterClothImageRepository
-@inject IRepository<MasterClothRelationEntity> masterClothRelationRepository
-@inject IRepository<MasterProductEntity> masterProductRepository
+@inject MasterClothRepository masterClothRepository
+@inject MasterClothColorRepository masterClothColorRepository
+@inject MasterClothImageRepository masterClothImageRepository
+@inject MasterClothRelationRepository masterClothRelationRepository
+@inject MasterProductRepository masterProductRepository
 
 <nav class="navbar navbar-light">
     <div class="container d-flex justify-content-center">
@@ -17,6 +16,36 @@
         </a>
     </div>
 </nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            サイドメニュー
+        </div>
+        <div class="col-9">
+            <div class="row">
+                <div class="text-center mx-auto col-md-8">
+                    <p class="mb-3 lead">新着アイテム</p>
+                    <h2>NEW ITEM</h2>
+                </div>
+            </div>
+            <div class="row">
+                @foreach (var masterCloth in masterClothRepository.FindAllBy(x => x.Code != ""))
+                {
+                    var masterClothImageList = masterClothImageRepository.FindAllBy(x => x.MasterClothId == masterCloth.Id);
+                    var imageUrl = masterClothImageList.First().Url;
+                    <div class="col-lg-3 col-md-6 p-3">
+                        <img class="img-fluid d-block" src="@imageUrl">
+                        <div>@masterCloth.ProductName</div>
+                        <div class="">
+                            @("¥" + masterCloth.Price) <small class="text-danger">@(masterCloth.PointRate + "%OFF")</small>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
 
 @code
 {

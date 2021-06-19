@@ -39,11 +39,13 @@ namespace clothes_site_sample
                 config.JsonSerializerOptions.Encoder = JavaScriptEncoder.Create(UnicodeRanges.All);
             });
 
-            builder.Services.AddSingleton<IRepository<MasterClothEntity>, MasterClothRepository>();
-            builder.Services.AddSingleton<IRepository<MasterClothColorEntity>, MasterClothColorRepository>();
-            builder.Services.AddSingleton<IRepository<MasterClothImageEntity>, MasterClothImageRepository>();
-            builder.Services.AddSingleton<IRepository<MasterClothRelationEntity>, MasterClothRelationRepository>();
-            builder.Services.AddSingleton<IRepository<MasterProductEntity>, MasterProductRepository>();
+            builder.Services.AddSingleton<MasterClothRepository>();
+            builder.Services.AddSingleton<MasterClothColorRepository>();
+            builder.Services.AddSingleton<MasterClothImageRepository>();
+            builder.Services.AddSingleton<MasterClothRelationRepository>();
+            builder.Services.AddSingleton<MasterProductRepository>();
+
+            builder.Services.AddScoped<OrderState>();
 
             await builder.Build().RunAsync();
         }

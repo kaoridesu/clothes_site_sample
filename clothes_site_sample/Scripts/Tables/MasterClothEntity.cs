@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Text.Json.Serialization;
 using clothes_site_sample.scripts.Bases;
 
@@ -18,6 +19,11 @@ namespace clothes_site_sample.Scripts.Tables
 
         public MasterClothEntity()
         {
+        }
+
+        public string DisplayPrice()
+        {
+            return "¥" + Price;
         }
     }
 }
