@@ -44,10 +44,10 @@ else
     // string json5 = await HttpClient.GetStringAsync(requestUri: "database/master_product.json");
 
     // マスターデータをスプレッドシートから取る場合はこちら
-    // string json = await HttpClient.GetStringAsync(requestUri: "https://script.google.com/macros/s/AKfycbw_oM7K0sMnA2fYfkq98TsQt1IOsz3TfibyapxefcvLlPEfP5-pszy6G13bdl3XDjAkCw/exec");
+        string json = await HttpClient.GetStringAsync(requestUri: "https://script.google.com/macros/s/AKfycbw_oM7K0sMnA2fYfkq98TsQt1IOsz3TfibyapxefcvLlPEfP5-pszy6G13bdl3XDjAkCw/exec");
 
     // マスターデータをプロジェクトから取る場合はこちら
-        string json = await HttpClient.GetStringAsync("database/master_1.json");
+    // string json = await HttpClient.GetStringAsync("database/master_1.json");
 
         JsonElement jsonElement = JsonSerializer.Deserialize<JsonElement>(json);
         masterClothRepository.FromJson(JsonSerializer.Deserialize<List<MasterClothEntity>>(jsonElement.GetProperty("[D]master_clothes").ToString()!));
