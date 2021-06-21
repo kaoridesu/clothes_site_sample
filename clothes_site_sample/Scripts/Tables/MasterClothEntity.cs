@@ -20,10 +20,5 @@ namespace clothes_site_sample.Scripts.Tables
         public MasterClothEntity()
         {
         }
-
-        public string DisplayPrice()
-        {
-            return "¥" + Price;
-        }
     }
 }
