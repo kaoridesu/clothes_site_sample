@@ -11,7 +11,6 @@ namespace clothes_site_sample.Scripts.Tables
         [JsonPropertyName("is_main")] [JsonInclude] public bool IsMain { get; private set; }
         [JsonPropertyName("is_sub")] [JsonInclude] public bool IsSub { get; private set; }
 
-
         public MasterClothImageEntity()
         {
         }
