@@ -80,7 +80,7 @@
                 {
                     var masterClothImageList = masterClothImageRepository.FindAllBy(x => x.MasterClothId == masterCloth.Id);
                     //var imageUrl = masterClothImageList.First().Url;
-                    var imageUrl = masterClothImageList.Where(x => x.IsMain == true) .First().Url;;                   
+                    var imageUrl = masterClothImageList.First(x => x.IsMain).Url;
                     <div class="col-lg-3 col-md-6 p-3">
                         <img class="img-fluid d-block" src="@imageUrl">
                         <div>@masterCloth.ProductName</div>
