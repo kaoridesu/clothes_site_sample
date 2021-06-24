@@ -44,7 +44,7 @@ namespace clothes_site_sample
             builder.Services.AddSingleton<MasterClothImageRepository>();
             builder.Services.AddSingleton<MasterClothRelationRepository>();
             builder.Services.AddSingleton<MasterProductRepository>();
-
+            builder.Services.AddSingleton<MasterPickupRepository>();
             builder.Services.AddScoped<OrderState>();
 
             await builder.Build().RunAsync();

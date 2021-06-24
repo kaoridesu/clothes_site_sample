@@ -55,6 +55,7 @@ else
         masterClothImageRepository.FromJson(JsonSerializer.Deserialize<List<MasterClothImageEntity>>(jsonElement.GetProperty("[D]master_clothes_image").ToString()!));
         masterClothRelationRepository.FromJson(JsonSerializer.Deserialize<List<MasterClothRelationEntity>>(jsonElement.GetProperty("[D]master_clothes_relation").ToString()!));
         masterProductRepository.FromJson(JsonSerializer.Deserialize<List<MasterProductEntity>>(jsonElement.GetProperty("[D]master_product").ToString()!));
+        masterPickupRepository.FromJson(JsonSerializer.Deserialize<List<MasterPickupEntity>>(jsonElement.GetProperty("[D]master_pickup").ToString()!));
     // masterClothRepository.FromJson(JsonSerializer.Deserialize<List<MasterClothEntity>>(json1));
     // masterClothColorRepository.FromJson(JsonSerializer.Deserialize<List<MasterClothColorEntity>>(json2));
     // masterClothImageRepository.FromJson(JsonSerializer.Deserialize<List<MasterClothImageEntity>>(json3));

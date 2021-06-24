@@ -17,10 +17,14 @@ namespace clothes_site_sample.Scripts.Tables
         [JsonPropertyName("video_url")] [JsonInclude] public string VideoUrl { get; private set; }
         [JsonPropertyName("product_introduction")] [JsonInclude] public string ProductIntroduction { get; private set; }
 
-        public MasterClothEntity()
+        public string DisplayPrice()
         {
+            return "¥" + Price;
         }
-        
+        public string DisplayRate()
+        {
+            return PointRate + "%off";
+        }
         
     }
 }
