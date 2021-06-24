@@ -50,4 +50,8 @@ namespace clothes_site_sample
             await builder.Build().RunAsync();
         }
     }
+
+    public class MasterPickupRepository
+    {
+    }
 }
