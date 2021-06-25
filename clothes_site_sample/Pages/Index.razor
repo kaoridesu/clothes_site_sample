@@ -1,13 +1,13 @@
 ﻿@page "/"
 
 @using clothes_site_sample.Scripts.Tables
-@using MasterPickupRepository = clothes_site_sample.MasterPickupRepository
 
 @inject MasterClothRepository masterClothRepository
 @inject MasterClothColorRepository masterClothColorRepository
 @inject MasterClothImageRepository masterClothImageRepository
 @inject MasterClothRelationRepository masterClothRelationRepository
 @inject MasterProductRepository masterProductRepository
+@inject MasterPickupRepository masterPickupRepository
 
 <p class="text-white bg-dark text-center">FREE SHIPPING!! 送料￥0</p>
 <div class="" style="">
@@ -21,7 +21,7 @@
 </div>
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
-        @foreach (var masterCloth in MasterPickupRepository.FindAll())
+        @foreach (var masterCloth in masterPickupRepository.FindAll())
         {
             <div class="carousel-item @(masterCloth.Id == 1 ? "active" : "") ">
                 <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: First slide">
