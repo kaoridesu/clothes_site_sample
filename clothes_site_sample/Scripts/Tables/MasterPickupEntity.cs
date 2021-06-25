@@ -8,6 +8,9 @@ namespace clothes_site_sample.Scripts.Tables
         [JsonPropertyName("id")] [JsonInclude] public int Id { get; private set; }
         [JsonPropertyName("carousel_img")] [JsonInclude] public string CarouselImg { get; private set; }
 
-        
+        public MasterPickupEntity()
+        {
+            
+        }
     }
 }
