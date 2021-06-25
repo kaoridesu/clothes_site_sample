@@ -23,12 +23,10 @@
     <div class="carousel-inner">
         @foreach (var masterCloth in masterPickupRepository.FindAll())
         {
+            
             <div class="carousel-item @(masterCloth.Id == 1 ? "active" : "") ">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: First slide">
-                    <title>Placeholder</title>
-                    <rect fill="#777" width="100%" height="100%"/>
-                    <text fill="#555" dy=".3em" x="50%" y="50%">First slide</text>
-                </svg>
+            <img src="@(masterCloth.CarouselImg)" alt="" class="d-block w-100">           
+            
             </div>
         }
     </div>
@@ -81,7 +79,7 @@
                         <img class="img-fluid d-block" src="@imageUrl">
                         <div>@masterCloth.ProductName</div>
                         <div class="">
-                            @("¥" + masterCloth.Price) <small class="text-danger">@(masterCloth.PointRate + "%OFF")</small>
+                            @(masterCloth.DisplayPrice()) <small class="text-danger">@(masterCloth.DisplayRate())</small>
                         </div>
                     </div>
                 }
