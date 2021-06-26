@@ -165,7 +165,7 @@ namespace clothes_site_sample.scripts.Bases
             return TryFindByIndex(Count(), out entity);
         }
 
-        public static List<TEntity> FindAll() => EntityList;
+        public List<TEntity> FindAll() => EntityList;
 
         public List<TEntity> FindAllBy(Predicate<TEntity> match) => EntityList.FindAll(match);
 

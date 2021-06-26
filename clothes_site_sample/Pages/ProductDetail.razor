@@ -1,5 +1,6 @@
 @page "/ProductDetail"
 @using clothes_site_sample.Scripts.Tables
+
 @inject MasterClothRepository masterClothRepository
 @inject MasterClothColorRepository masterClothColorRepository
 @inject MasterClothImageRepository masterClothImageRepository
@@ -23,14 +24,14 @@
         <div class="col-md-6">
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
-                    @foreach (var masterClothes in masterClothImageRepository.FindAll())
+                    @foreach (var masterClothes in MasterClothImageRepository.FindAll())
                     {
                         <div class="carousel-item @(masterClothes.MasterClothId == 15 ? "active" : "") ">
                             <img src="@(masterClothes.Url)" alt="" class="d-block w-70 m-auto">
                     
                         </div>
                     }
-                 
+                  
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
