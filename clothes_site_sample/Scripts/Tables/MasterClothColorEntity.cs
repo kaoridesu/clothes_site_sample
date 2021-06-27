@@ -8,7 +8,7 @@ namespace clothes_site_sample.Scripts.Tables
         [JsonPropertyName("id")] [JsonInclude] public int Id { get; private set; }
         [JsonPropertyName("master_cloth_id")] [JsonInclude] public int MasterClothesId { get; private set; }
         [JsonPropertyName("color")] [JsonInclude] public string Color { get; private set; }
-        [JsonPropertyName("image_url")] [JsonInclude] public string ImageIrl { get; private set; }
+        [JsonPropertyName("image_url")] [JsonInclude] public string ImageUrl { get; private set; }
 
         public MasterClothColorEntity()
         {
