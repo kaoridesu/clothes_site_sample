@@ -55,62 +55,53 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="row">
-
                         @foreach (var masterCloth in masterClothColorRepository.FindAllBy(x => x.MasterClothesId == 15))
-                        {
-                            <div class="col-md-2"></div>
-                            <div class="carousel-item @(masterCloth.Id == 1 ? "active" : "") ">
-                                <img src="@(masterCloth.ImageUrl)" alt="" class="d-block w-70 m-auto">
+                                                  {
+                                                      <div class="col-md-2">
+                                                          <img class="" src="@masterCloth.ImageUrl" alt="">
+                                                      </div>
+                                                  }
+                        </div>
 
-                            </div>
-                        }
                     </div>
                 </div>
             </div>
+
             <div class="row">
                 <div class="col-md-12">
                     <div class="row">
-                        @foreach (var masterCloth in masterClothImageRepository.FindAllBy(x => x.MasterClothId == 15))
+                        @foreach (var masterCloth in masterClothImageRepository.FindAllBy(x => x.MasterClothId))
                         {
-                            <div class="carousel-item @(masterCloth.Id == 1 ? "active" : "") ">
-                                <img src="@(masterCloth.Url)" alt="" class="d-block w-100 m-auto">
-
+                            <div class="col-md-2">
+                                <img class="" src="@masterCloth.Url" alt="">
                             </div>
                         }
-                        <div class="col-md-2"></div>
-                        <div class="col-md-2"></div>
-                        <div class="col-md-2"></div>
-                        <div class="col-md-2"></div>
-                        <div class="col-md-2"></div>
-                        <div class="col-md-2"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="col-md-12">
                         <div class="row">
-                            <div class="col-md-4"></div>
-                            <div class="col-md-4"></div>
-                            <div class="col-md-4"></div>
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-4"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
 
-<div class="col-md-6" >
-    <div class="row">
-        <div class="col-md-12">
-            <text style="color:#FFFFFF; background-color:#FFCBCB; ">NEW</text>
-            <p class="text-left">今田美桜 ボリュームティアードシャツワンピース[k8799w]</p>
-            <h3>¥1,999</h3>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <text style="color:#FFFFFF; background-color:#FFCBCB; ">NEW</text>
+                    <p class="text-left">今田美桜 ボリュームティアードシャツワンピース[k8799w]</p>
+                    <h3>¥1,999</h3>
 
+                </div>
+            </div>
         </div>
     </div>
-</div>
+
 
 @code {
 
