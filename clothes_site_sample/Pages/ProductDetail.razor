@@ -97,25 +97,35 @@
             </div>
         </div>
         <div class="col-md-6">
-            @* <text style="color:#FFFFFF; background-color:#FFCBCB; ">NEW</text> *@
-            @* <p class="text-left">今田美桜 ボリュームティアードシャツワンピース[k8799w]</p> *@
-            @* <h3>¥1,999</h3> *@
+            @{
+                <div style="color:#FFFFFF; background-color:#FFCBCB;　width:1%; ">NEW</div>
 
+                var masterClothEntity = masterClothRepository.GetBy(x => x.Id == 15);
+                <div>@(masterClothEntity.ProductName) </div>
+
+                <div>今田美桜 @masterClothEntity.ProductName@(masterClothEntity.Code)</div>
+                <h3>@(masterClothEntity.DisplayPrice())（税込）</h3>
+                <div>@(masterClothEntity.Price * 5 * 0.01) @(masterClothEntity.DisplayRate())</div>
+
+            }
+
+
+            <div class=""></div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="row">
-                        @foreach (var masterCloth in masterClothColorRepository.FindAllBy(x => x.MasterClothesId == 15 ||x.Color=="black"))
+                        @foreach (var masterCloth in masterClothColorRepository.FindAllBy(x => x.MasterClothesId == 15))
                         {
-                            <div class="col-md-3">
+                            <div class="col-md-4">
                                 <img class="" src="@masterCloth.ImageUrl" alt="">
                             </div>
-                            <div class="col-md-3">
+                            <div class="col-md-4">
+                                <p class="text-left">@masterCloth.Color</p>
                                 <a class="btn btn-outline-secondary" href="#">Secondary</a>
                             </div>
-                            <div class="col-md-3">
-                                <a class="btn btn-outline-secondary" href="#">Secondary</a>
+                            <div class="col-md-4">
+                                <a class="btn btn-outline-secondary" href="#">♡</a>
                             </div>
-                            <div class="col-md-3"></div>
                         }
                     </div>
 
@@ -136,12 +146,22 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <h6 class="">Heading 6</h6>
+                            <h6 class="">
+                                @{
+                                    var masterClothes = masterClothRepository.GetBy(x => x.Id == 15);
+                                    <div>@(masterClothes.ProductIntroduction) </div>
+                                }
+                            </h6>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <h6 class="">Heading 6</h6>
+                            <h6 class="">
+                                @{
+                                    var masterClothx = masterClothRepository.GetBy(x => x.Id == 15);
+                                    <p>@(masterClothx.VideoUrl) </p>
+                                }
+                            </h6>
                         </div>
                     </div>
                 </div>
