@@ -97,14 +97,14 @@
             </div>
         </div>
         <div class="col-md-6">
-            <text style="color:#FFFFFF; background-color:#FFCBCB; ">NEW</text>
-            <p class="text-left">今田美桜 ボリュームティアードシャツワンピース[k8799w]</p>
-            <h3>¥1,999</h3>
+            @* <text style="color:#FFFFFF; background-color:#FFCBCB; ">NEW</text> *@
+            @* <p class="text-left">今田美桜 ボリュームティアードシャツワンピース[k8799w]</p> *@
+            @* <h3>¥1,999</h3> *@
 
             <div class="row">
                 <div class="col-md-12">
                     <div class="row">
-                        @foreach (var masterCloth in masterClothColorRepository.FindAllBy(x => x.MasterClothesId == 15))
+                        @foreach (var masterCloth in masterClothColorRepository.FindAllBy(x => x.MasterClothesId == 15 ||x.Color=="black"))
                         {
                             <div class="col-md-3">
                                 <img class="" src="@masterCloth.ImageUrl" alt="">
