@@ -121,8 +121,19 @@
                             </div>
                             <div class="col-md-4">
                                 <p class="text-left">@masterCloth.Color</p>
-                                <a class="btn btn-outline-secondary" href="#">Secondary</a>
-                            </div>
+                                <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    カートに入れる
+                                </button>
+                                 <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                                     <a class="dropdown-item" href="#">
+                                         @foreach(var masterProduct in masterProductRepository.FindAllBy(x => x.MasterClothId == 15 && x.MasterClothColorId ==1 ))
+                                         {
+                                             <a class="dropdown-item" href="#">@masterProduct.Size</a>
+                                    
+                                         }
+                                     </a>
+                                 </div>
+                                  </div>
                             <div class="col-md-4">
                                 <a class="btn btn-outline-secondary" href="#">♡</a>
                             </div>
