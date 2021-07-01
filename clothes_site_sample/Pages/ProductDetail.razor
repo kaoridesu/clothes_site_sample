@@ -98,7 +98,7 @@
         </div>
         <div class="col-md-6">
             @{
-                <div style="color:#FFFFFF; background-color:#FFCBCB;　width:1%; ">NEW</div>
+                <div style="color:#FFFFFF; background-color:#FFCBCB; width: min-content; ">NEW</div>
 
                 var masterClothEntity = masterClothRepository.GetBy(x => x.Id == 15);
                 <div>@(masterClothEntity.ProductName) </div>
@@ -168,9 +168,11 @@
                     <div class="row">
                         <div class="col-md-12">
                             <h6 class="">
-                                @{
+                                @{  
                                     var masterClothx = masterClothRepository.GetBy(x => x.Id == 15);
-                                    <p>@(masterClothx.VideoUrl) </p>
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe class="embed-responsive-item" src="@masterClothx.VideoUrl" allowfullscreen></iframe>
+                                    </div>
                                 }
                             </h6>
                         </div>
