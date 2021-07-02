@@ -9,9 +9,9 @@ namespace clothes_site_sample.Scripts.Tables
             return FindAllBy(x => x.Id == id);
         }
 
-        public int FindAllByMasterClothId
+        public List<MasterClothImageEntity> FindAllByMasterClothId(int masterClothId)
         {
-            
+            return FindAllBy(x => x.MasterClothId == masterClothId);
         }
     }
 }

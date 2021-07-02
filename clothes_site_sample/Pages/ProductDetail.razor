@@ -27,13 +27,13 @@
                 <div class="col-md-12">
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
-                            @foreach (var masterCloth in masterClothImageRepository.FindAllBy(15))                            {
-                                <div class="carousel-item @(masterCloth.Url == 1 ? "active" : "") ">
+                            @foreach (var masterCloth in masterClothImageRepository.FindAllByMasterClothId(15))                            {
+                                <div class="carousel-item @(masterCloth.Id == 1 ? "active" : "") ">
                                     <img src="@(masterCloth.Url)" alt="" class="d-block w-100 m-auto">
 
                                 </div>
                             }
-                            @foreach (var masterCloth in masterClothColorRepository.FindAllBy(x => x.MasterClothesId == 15))
+                            @foreach (var masterCloth in masterClothColorRepository.FindAllBymMasterClothColorId(15))
                             {
                                 <div class="carousel-item">
                                     <img src="@(masterCloth.ImageUrl)" alt="" class="d-block w-100 m-auto">
@@ -55,7 +55,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="row">
-                            @foreach (var masterCloth in masterClothColorRepository.FindAllBy(x => x.MasterClothesId == 15))
+                            @foreach (var masterCloth in masterClothColorRepository.FindAllBymMasterClothColorId( 15))
                             {
                                 <div class="col-md-2">
                                     <img class="" src="@masterCloth.ImageUrl" alt="">
@@ -70,7 +70,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="row">
-                        @foreach (var masterCloth in masterClothImageRepository.FindAllBy(x => x.MasterClothId == 15))
+                        @foreach (var masterCloth in masterClothImageRepository.FindAllByMasterClothId(15))
                         {
                             <div class="col-md-2">
                                 <img class="" src="@masterCloth.Url" alt="">
@@ -82,7 +82,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="row">
-                        @foreach (var masterClothRelation in masterClothRelationRepository.FindAllBy(x => x.MasterClothId == 15))
+                        @foreach (var masterClothRelation in masterClothRelationRepository.FindAllByMasterClothId(15))
                         {
                             List<MasterClothColorEntity> masterClothColorList = masterClothColorRepository.FindAllBy(x => x.MasterClothesId == masterClothRelation.MasterClothRelationId);
                             MasterClothColorEntity masterClothColor = masterClothColorList.First();
@@ -99,7 +99,7 @@
             @{
                 <div style="color:#FFFFFF; background-color:#FFCBCB; width: min-content; ">NEW</div>
 
-                var masterClothEntity = masterClothRepository.GetBy(x => x.Id == 15);
+                var masterClothEntity = masterClothRepository.GetById(15);
                 <div>@(masterClothEntity.ProductName) </div>
 
                 <div>今田美桜 @masterClothEntity.ProductName@(masterClothEntity.Code)</div>
@@ -113,7 +113,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="row">
-                        @foreach (var masterCloth in masterClothColorRepository.FindAllBy(x => x.MasterClothesId == 15))
+                        @foreach (var masterCloth in masterClothColorRepository.FindAllBymMasterClothColorId(15))
                         {
                             <div class="col-md-4">
                                 <img class="" src="@masterCloth.ImageUrl" alt="">
@@ -125,7 +125,7 @@
                                 </button>
                                  <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
                                      <a class="dropdown-item" href="#">
-                                         @foreach(var masterProduct in masterProductRepository.FindAllBy(x => x.MasterClothId == 15 && x.MasterClothColorId ==1 ))
+                                         @foreach(var masterProduct in masterProductRepository.FindAllByMasterClothIdAndColorId(15,1))
                                          {
                                              <a class="dropdown-item" href="#">@masterProduct.Size</a>
                                     
@@ -158,7 +158,7 @@
                         <div class="col-md-12">
                             <h6 class="">
                                 @{
-                                    var masterClothes = masterClothRepository.GetBy(x => x.Id == 15);
+                                    var masterClothes = masterClothRepository.GetById( 15);
                                     <div>@(masterClothes.ProductIntroduction) </div>
                                 }
                             </h6>
@@ -168,7 +168,7 @@
                         <div class="col-md-12">
                             <h6 class="">
                                 @{  
-                                    var masterClothx = masterClothRepository.GetBy(x => x.Id == 15);
+                                    var masterClothx = masterClothRepository.GetById( 15);
                                     <div class="embed-responsive embed-responsive-16by9">
                                         <iframe class="embed-responsive-item" src="@masterClothx.VideoUrl" allowfullscreen></iframe>
                                     </div>

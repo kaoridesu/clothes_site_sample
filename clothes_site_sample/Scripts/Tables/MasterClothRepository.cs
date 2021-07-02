@@ -11,5 +11,9 @@ namespace clothes_site_sample.Scripts.Tables
         {
             return FindAll();
         }
+        public MasterClothEntity GetById(int id)
+        {
+            return GetBy(x => x.Id == id);
+        }
     }
 }
