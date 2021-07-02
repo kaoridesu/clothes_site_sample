@@ -33,14 +33,17 @@
 
                                 </div>
                             }
-                            @foreach (var masterCloth in masterClothColorRepository.FindAllBymMasterClothColorId(15))
-                            {
-                                <div class="carousel-item">
-                                    <img src="@(masterCloth.ImageUrl)" alt="" class="d-block w-100 m-auto">
+                          
+                            <span class="border-bottom">
+                                
+                                @foreach (var masterCloth in masterClothColorRepository.FindAllBymMasterClothColorId(15))
+                                {
+                                    <div class="carousel-item">
+                                        <img src="@(masterCloth.ImageUrl)" alt="" class="d-block w-100 m-auto">
 
-                                </div>
-                            }
-
+                                    </div>
+                                }
+                            </span>
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
