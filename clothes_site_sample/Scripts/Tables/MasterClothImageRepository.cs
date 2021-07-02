@@ -8,5 +8,10 @@ namespace clothes_site_sample.Scripts.Tables
         {
             return FindAllBy(x => x.Id == id);
         }
+
+        public int FindAllByMasterClothId
+        {
+            
+        }
     }
 }
