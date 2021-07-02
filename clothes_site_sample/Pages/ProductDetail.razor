@@ -27,7 +27,7 @@
                 <div class="col-md-12">
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
-                            @foreach (var masterCloth in masterClothImageRepository.FindAllBy MasterClothId(15))                            {
+                            @foreach (var masterCloth in masterClothImageRepository.FindAllBy(15))                            {
                                 <div class="carousel-item @(masterCloth.Url == 1 ? "active" : "") ">
                                     <img src="@(masterCloth.Url)" alt="" class="d-block w-100 m-auto">
 
